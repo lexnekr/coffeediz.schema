@@ -1,8 +1,8 @@
 <?
-$MESS["COFFEEDIZ_INSTALL_NAME"] = "Ìèêðîðàçìåòêà schema.org";
-$MESS["COFFEEDIZ_INSTALL_DESCRIPTION"] = "Íàáîð êîìïîíåíòîâ äëÿ îôîðìëåíèÿ ìèêðîðàçìåòêè";
-$MESS["COFFEEDIZ_INSTALL_TITLE"] = "Óñòàíîâêà ìîäóëÿ";
-$MESS["COFFEEDIZ_UNINSTALL_TITLE"] = "Óäàëåíèå ìîäóëÿ";
-$MESS["SPER_PARTNER"] = "Çàäîéíûé Àëåêñåé";
-$MESS["PARTNER_URI"] = "http://êîôåäèçàéí.ðô/";
+$MESS["COFFEEDIZ_INSTALL_NAME"] = "ÐœÐ¸ÐºÑ€Ð¾Ñ€Ð°Ð·Ð¼ÐµÑ‚ÐºÐ° schema.org";
+$MESS["COFFEEDIZ_INSTALL_DESCRIPTION"] = "ÐÐ°Ð±Ð¾Ñ€ ÐºÐ¾Ð¼Ð¿Ð¾Ð½ÐµÐ½Ñ‚Ð¾Ð² Ð´Ð»Ñ Ð¾Ñ„Ð¾Ñ€Ð¼Ð»ÐµÐ½Ð¸Ñ Ð¼Ð¸ÐºÑ€Ð¾Ñ€Ð°Ð·Ð¼ÐµÑ‚ÐºÐ¸";
+$MESS["COFFEEDIZ_INSTALL_TITLE"] = "Ð£ÑÑ‚Ð°Ð½Ð¾Ð²ÐºÐ° Ð¼Ð¾Ð´ÑƒÐ»Ñ";
+$MESS["COFFEEDIZ_UNINSTALL_TITLE"] = "Ð£Ð´Ð°Ð»ÐµÐ½Ð¸Ðµ Ð¼Ð¾Ð´ÑƒÐ»Ñ";
+$MESS["SPER_PARTNER"] = "Ð—Ð°Ð´Ð¾Ð¹Ð½Ñ‹Ð¹ ÐÐ»ÐµÐºÑÐµÐ¹";
+$MESS["PARTNER_URI"] = "http://ÐºÐ¾Ñ„ÐµÐ´Ð¸Ð·Ð°Ð¹Ð½.Ñ€Ñ„/";
 ?>

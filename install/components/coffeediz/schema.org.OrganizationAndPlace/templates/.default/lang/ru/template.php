@@ -1,8 +1,8 @@
 <?
-$MESS ['DRINT_ADDRESS'] = "Àäðåñ:";
-$MESS ['DRINT_PHONE'] = "Òåëåôîí:";
-$MESS ['DRINT_FAX'] = "Ôàêñ:";
+$MESS ['DRINT_ADDRESS'] = "ÐÐ´Ñ€ÐµÑ:";
+$MESS ['DRINT_PHONE'] = "Ð¢ÐµÐ»ÐµÑ„Ð¾Ð½:";
+$MESS ['DRINT_FAX'] = "Ð¤Ð°ÐºÑ:";
 $MESS ['DRINT_EMAIL'] = "E-mail:";
-$MESS ['URL_TITLE'] = "Àäðåñ ñàéòà:";
-$MESS ['TAXID'] = "ÈÍÍ:";
+$MESS ['URL_TITLE'] = "ÐÐ´Ñ€ÐµÑ ÑÐ°Ð¹Ñ‚Ð°:";
+$MESS ['TAXID'] = "Ð˜ÐÐ:";
  ?>

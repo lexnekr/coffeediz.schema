@@ -1,6 +1,6 @@
 <?
-$MESS ['COMPONENT_NAME'] = "Õëåáíûå êðîøêè";
-$MESS ['DESCRIPTION'] = "Ìèêðîðàçìåòêà õëåáíûõ êðîøåê â ôîðìàòàõ schema.org è data-vocabulary.org";
-$MESS ['COMPONENT_PATH_DESCRIPTION'] = "Êîìïîíåíòû Êîôå-Äèçàéí";
+$MESS ['COMPONENT_NAME'] = "Ð¥Ð»ÐµÐ±Ð½Ñ‹Ðµ ÐºÑ€Ð¾ÑˆÐºÐ¸";
+$MESS ['DESCRIPTION'] = "ÐœÐ¸ÐºÑ€Ð¾Ñ€Ð°Ð·Ð¼ÐµÑ‚ÐºÐ° Ñ…Ð»ÐµÐ±Ð½Ñ‹Ñ… ÐºÑ€Ð¾ÑˆÐµÐº Ð² Ñ„Ð¾Ñ€Ð¼Ð°Ñ‚Ð°Ñ… schema.org Ð¸ data-vocabulary.org";
+$MESS ['COMPONENT_PATH_DESCRIPTION'] = "ÐšÐ¾Ð¼Ð¿Ð¾Ð½ÐµÐ½Ñ‚Ñ‹ ÐšÐ¾Ñ„Ðµ-Ð”Ð¸Ð·Ð°Ð¹Ð½";
 $MESS ['COMPONENT_PATH_CHILD_DESCRIPTION'] = "schema.org";
 ?>
