@@ -4,7 +4,10 @@
 * coffeediz:schema.org.OrganizationAndPlace - Адрес организации/места
 * coffeediz:breadcrumb (обёртка над bitrix:breadcrumb) - Хлебные крошки
  
- 
+Документация
+-------
+* [coffeediz:schema.org.OrganizationAndPlace - Адрес организации/места](http://xn--80ahcjeib4ac4d.xn--p1ai/information/about_microcathode_say_a_word_how_to_implement_microcathode_module_coffeediz_schema_on_the_website_u/#OrganizationAndPlace) 
+* [coffeediz:breadcrumb (обёртка над bitrix:breadcrumb) - Хлебные крошки](http://xn--80ahcjeib4ac4d.xn--p1ai/information/about_microcathode_say_a_word_how_to_implement_microcathode_module_coffeediz_schema_on_the_website_u/#breadcrumb) 
 
 **Адрес организации/места**
 -------
