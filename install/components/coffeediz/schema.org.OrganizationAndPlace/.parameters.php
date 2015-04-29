@@ -20,6 +20,10 @@ $arComponentParameters = array(
 			"SORT" => 120,
 			"NAME" => "PARAMETERS",
 		),
+		"RATING" => array(
+			"SORT" => 800,
+			"NAME" => GetMessage("RATING"),
+		),
 	),
 	"PARAMETERS"  =>  array(
 		"SHOW" => array(
@@ -98,6 +102,21 @@ $arComponentParameters = array(
 			"TYPE" =>"SRTING",
 			"ROWS" => 5,
 			"COLS" => "50",
+		),
+		"PARAM_RATING_SHOW" => array(
+			"PARENT" => "ADDITIONAL_SETTINGS",
+			"NAME" => GetMessage("PARAM_RATING_SHOW"),
+			"TYPE" => "CHECKBOX",
+			"REFRESH" => "Y",
+		),
+		"ITEMPROP" => array(
+			"PARENT" => "ADDITIONAL_SETTINGS",
+			"NAME" => GetMessage("itemprop"),
+			"TYPE" => "LIST",
+			"VALUES" => array(
+				"" => "", 
+				"itemReviewed" => GetMessage("ITEMPROP_itemReviewed")
+			)
 		),
 	)
 );
@@ -762,3 +781,51 @@ if ($arCurrentValues["TYPE_2"] == "CivicStructure" or $arCurrentValues["TYPE_2"]
 		"MULTIPLE" =>"N",
 	);
 }
+
+
+
+//START RATING
+if ($arCurrentValues["PARAM_RATING_SHOW"] == "Y")
+{
+	$arComponentParameters["PARAMETERS"]["RATING_SHOW"] = Array(
+		"PARENT" => "RATING",
+		"NAME" => GetMessage("PARAM_SHOW"),
+		"TYPE" => "CHECKBOX",
+	);
+	$arComponentParameters["PARAMETERS"]["RATINGVALUE"] = Array(
+		"PARENT" => "RATING",
+		"NAME" => GetMessage("ratingValue"),
+		"TYPE" => "STRING",
+		"SORT" => 500,
+		"DEFAULT" => "",
+	);
+	$arComponentParameters["PARAMETERS"]["RAITINGCOUNT"] = Array(
+			"PARENT" => "RATING",
+			"NAME" => GetMessage("ratingCount"),
+			"TYPE" => "STRING",
+			"SORT" => 500,
+			"DEFAULT" => "",
+	);
+	$arComponentParameters["PARAMETERS"]["REVIEWCOUNT"] = Array(
+			"PARENT" => "RATING",
+			"NAME" => GetMessage("reviewCount"),
+			"TYPE" => "STRING",
+			"SORT" => 500,
+			"DEFAULT" => "",
+	);
+	$arComponentParameters["PARAMETERS"]["BESTRATING"] = Array(
+			"PARENT" => "RATING",
+			"NAME" => GetMessage("bestRating"),
+			"TYPE" => "STRING",
+			"SORT" => 500,
+			"DEFAULT" => "5",
+	);
+	$arComponentParameters["PARAMETERS"]["WORSTRATING"] = Array(
+			"PARENT" => "RATING",
+			"NAME" => GetMessage("worstRating"),
+			"TYPE" => "STRING",
+			"SORT" => 500,
+			"DEFAULT" => "1",
+	);
+}
+//END RATING

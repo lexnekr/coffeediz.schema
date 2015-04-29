@@ -1,4 +1,15 @@
 <?
+$MESS ['RATING'] = "Рейтинг";
+$MESS ['PARAM_RATING_SHOW'] = "Выводить рейтинг";
+$MESS ['RATING_SHOW'] = "Не отображать на сайте";
+$MESS ['ratingValue'] = "Значение рейтинга";
+$MESS ['ratingCount'] = "Количество голосов";
+$MESS ['reviewCount'] = "Количество отзывов";
+$MESS ['bestRating'] = "Максимальное значение рейтинга";
+$MESS ['worstRating'] = "Минимальное значение рейтинга";
+$MESS ['itemprop'] = "Является свойством другого объекта Schema.org";
+$MESS ['ITEMPROP_itemReviewed'] = "Рейтинга/Отзывов";
+
 $MESS ['PARAM_SHOW'] = "Не отображать на сайте";
 $MESS ['PARAM_NAME'] = "Название компании";
 $MESS ['PARAM_POST_CODE'] = "Индекс";

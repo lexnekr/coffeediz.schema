@@ -9,39 +9,39 @@
 	<div itemscope itemtype="<?=$arResult['TYPE']?>" <? if($arParams['SHOW'] == "Y") { echo 'style="display: none;"'; } ?> <? if(!empty($arParams['ITEMPROP'])):?>itemprop="<?=$arParams['ITEMPROP'];?>" <?endif?>>
 
 	<?if(!empty($arParams['NAME'])):?>
-		<div itemprop="name">
-			<?=$arParams['NAME']?>
+		<div>
+			<b><span itemprop="name"><?=$arParams['NAME']?></span></b>
 		</div>
 	<?endif?>
 
 	<?if(!empty($arParams['DESCRIPTION'])):?>
-		<div itemprop="description">
-			<?=$arParams['DESCRIPTION']?>
+		<div>
+			 <span itemprop="description"><?=$arParams['DESCRIPTION']?></span>
 		</div>
 	<?endif?>
 
 	<?if(!empty($arParams['POST_CODE']) or !empty($arParams['COUNTRY']) or !empty($arParams['REGION']) or !empty($arParams['LOCALITY']) or !empty($arParams['ADDRESS'])) { ?>
-	<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+	<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><?=GetMessage('DRINT_ADDRESS')?>
 		 <?if(!empty($arParams['POST_CODE'])):?>
-			 <div itemprop="postalCode"><?=$arParams['POST_CODE']?></div>
+			 <span itemprop="postalCode"><?=$arParams['POST_CODE']?></span>,
 		 <?endif?>
 		 <?if(!empty($arParams['COUNTRY'])):?>
-			 <div itemprop="addressCountry"><?=$arParams['COUNTRY']?></div>
+			 <span itemprop="addressCountry"><?=$arParams['COUNTRY']?></span>,
 		 <?endif?>
 		 <?if(!empty($arParams['REGION'])):?>
-			 <div itemprop="addressRegion"><?=$arParams['REGION']?></div>
+			 <span itemprop="addressRegion"><?=$arParams['REGION']?></span>,
 		 <?endif?>
 	   <?if(!empty($arParams['LOCALITY'])):?>
-		   <div itemprop="addressLocality"><?=$arParams['LOCALITY']?></div>
+		   <span itemprop="addressLocality"><?=$arParams['LOCALITY']?></span>,
 	   <?endif?>
 	   <?if(!empty($arParams['ADDRESS'])):?>
-		  <div itemprop="streetAddress"><?=$arParams['ADDRESS']?></div>
+		  <span itemprop="streetAddress"><?=$arParams['ADDRESS']?></span>
 	   <?endif?>
 	 </div>
 	<? } ?>
 	
 	<?if(!empty($arParams['PHONE'])) { ?>
-	 <div>
+	 <div><?=GetMessage('DRINT_PHONE')?>
 		 <?foreach($arParams['PHONE'] as $key => $phone){
 				if(empty($phone))
 					continue;
@@ -53,13 +53,13 @@
 	<? } ?>
 	
 	<?if(!empty($arParams['FAX'])) { ?>
-		<div>
+		<div><?=GetMessage('DRINT_FAX')?>
 			<span itemprop="faxNumber"><?=$arParams['FAX']?></span>
 		</div>
 	<? } ?>
 	
 	<?if(!empty($arParams['EMAIL']) and $arParams['TYPE'] == "Organization") { ?>
-		<div>
+		<div><?=GetMessage('DRINT_EMAIL')?>
 			<?foreach($arParams['EMAIL'] as $key => $email){
 				if(empty($email))
 					continue;
@@ -71,7 +71,7 @@
 	<? } ?>
 
 	<?if(!empty($arParams['SITE'])) { ?>
-		<div>
+		<div><?=GetMessage('URL_TITLE')?>
 			<a href="http://<?=$arParams['SITE']?>" itemprop="url"><?=$arParams['SITE']?></a>
 		</div>
 	<? } ?>
@@ -84,7 +84,7 @@
 
 	<?if($arParams['TYPE_2'] == "CivicStructure" or $arParams['TYPE_2'] == "LocalBusiness") { ?>
 
-	<div>
+	<div><?=GetMessage('OPENING_HOURS')?>
 		 <?foreach($arParams['OPENING_HOURS_ROBOT'] as $key => $openingHours){
 				if(empty($openingHours))
 					continue;
@@ -103,15 +103,16 @@
 	<? } ?>
 
 	<?if(!empty($arParams['TAXID']) and $arParams['TYPE'] == "Organization"):?>
-		<div>
+		<div><?=GetMessage('TAXID')?>
 			 <span itemprop="taxID"><?=$arParams['TAXID']?></span>
 		</div>
 	<?endif?>
 
 	<?if(!empty($arParams['RATINGVALUE']) and $arParams['PARAM_RATING_SHOW'] == "Y"):?>
+		<br/><b><?=GetMessage('RATING')?></b>
 	<?$APPLICATION->IncludeComponent(
 		"coffeediz:schema.org.AggregateRating",
-		".default",
+		"example",
 		Array(
 			"SHOW" => $arParams['RATING_SHOW'],
 			"RATINGVALUE" => $arParams['RATINGVALUE'],
