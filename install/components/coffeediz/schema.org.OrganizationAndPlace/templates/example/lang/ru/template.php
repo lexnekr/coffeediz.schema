@@ -5,4 +5,6 @@ $MESS ['DRINT_FAX'] = "Факс:";
 $MESS ['DRINT_EMAIL'] = "E-mail:";
 $MESS ['URL_TITLE'] = "Адрес сайта:";
 $MESS ['TAXID'] = "ИНН:";
+$MESS ['RATING'] = "Рейтинг:";
+$MESS ['OPENING_HOURS'] = "Время работы:";
  ?>
