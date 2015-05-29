@@ -12,22 +12,22 @@ foreach($ar as $Collection){
 
 $arComponentParameters = array(
 	"GROUPS" => array(
-		"MAIN" => array(
+		"MAIN_PARAMS" => array(
 			"SORT" => 110,
-			"NAME" => "MAIN",
+			"NAME" => GetMessage("MAIN_PARAMS"),
 		),
-		"PARAMETERS" => array(
+		"TRUMBNAIL_PARAMS" => array(
 			"SORT" => 120,
-			"NAME" => "PARAMETERS",
+			"NAME" => GetMessage("TRUMBNAIL_PARAMS"),
 		),
-		"PARAMETERS_ITEMREVIEWED" => array(
+		"RATING" => array(
 			"SORT" => 900,
-			"NAME" => GetMessage("PARAMETERS_ITEMREVIEWED"),
+			"NAME" => GetMessage("RATING"),
 		),
 	),
 	"PARAMETERS"  =>  array(
 		"SHOW" => array(
-			"PARENT" => "ADDITIONAL_SETTINGS",
+			"PARENT" => "MAIN_PARAMS",
 			"NAME" => GetMessage("PARAM_SHOW"),
 			"TYPE" => "LIST",
 			"VALUES" => array(
@@ -37,46 +37,130 @@ $arComponentParameters = array(
 			),
 		),
 		"CONTENTURL" => array(
-			"PARENT" => "ADDITIONAL_SETTINGS",
+			"PARENT" => "MAIN_PARAMS",
 			"NAME" => GetMessage("CONTENTURL"),
 			"TYPE" => "STRING",
 			"SORT" => 500,
 			"DEFAULT" => "",
 		),
 		"NAME" => array(
-			"PARENT" => "ADDITIONAL_SETTINGS",
+			"PARENT" => "MAIN_PARAMS",
 			"NAME" => GetMessage("NAME"),
 			"TYPE" => "STRING",
 			"SORT" => 500,
 			"DEFAULT" => "",
 		),
 		"CAPTION" => array(
-			"PARENT" => "ADDITIONAL_SETTINGS",
+			"PARENT" => "MAIN_PARAMS",
 			"NAME" => GetMessage("CAPTION"),
 			"TYPE" => "STRING",
 			"SORT" => 500,
 			"DEFAULT" => "",
 		),
 		"DESCRIPTION" => array(
-			"PARENT" => "ADDITIONAL_SETTINGS",
+			"PARENT" => "MAIN_PARAMS",
 			"NAME" => GetMessage("DESCRIPTION"),
 			"TYPE" => "STRING",
 			"SORT" => 500,
 			"DEFAULT" => "",
+			"ROWS" => 5,
+			"COLS" => "50",
 		),
 		"HEIGHT" => array(
-			"PARENT" => "ADDITIONAL_SETTINGS",
+			"PARENT" => "MAIN_PARAMS",
 			"NAME" => GetMessage("HEIGHT"),
 			"TYPE" => "STRING",
 			"SORT" => 500,
 			"DEFAULT" => "",
 		),
 		"WIDTH" => array(
-			"PARENT" => "ADDITIONAL_SETTINGS",
+			"PARENT" => "MAIN_PARAMS",
 			"NAME" => GetMessage("WIDTH"),
 			"TYPE" => "STRING",
 			"SORT" => 500,
 			"DEFAULT" => "",
 		),
+
+
+		"TRUMBNAIL_CONTENTURL" => array(
+			"PARENT" => "TRUMBNAIL_PARAMS",
+			"NAME" => GetMessage("TRUMBNAIL_CONTENTURL"),
+			"TYPE" => "STRING",
+			"SORT" => 500,
+			"DEFAULT" => "",
+		),
+
+
+		"TRUMBNAIL_TYPE" => array(
+			"PARENT" => "ADDITIONAL_SETTINGS",
+			"NAME" => GetMessage("TRUMBNAIL_TYPE"),
+			"TYPE" => "CHECKBOX",
+		),
+		"REPRESENTATIVEOFPAGE" => array(
+			"PARENT" => "ADDITIONAL_SETTINGS",
+			"NAME" => GetMessage("REPRESENTATIVEOFPAGE"),
+			"TYPE" => "LIST",
+			"VALUES" => array(
+				"" => "-",
+				"True" => GetMessage("YES"),
+				"False" => GetMessage("NO"),
+			),
+		),
+		"PARAM_RATING_SHOW" => array(
+			"PARENT" => "ADDITIONAL_SETTINGS",
+			"NAME" => GetMessage("PARAM_RATING_SHOW"),
+			"TYPE" => "CHECKBOX",
+			"REFRESH" => "Y",
+		),
+
+
 	)
 );
+
+
+
+//START RATING
+if ($arCurrentValues["PARAM_RATING_SHOW"] == "Y")
+{
+	$arComponentParameters["PARAMETERS"]["RATING_SHOW"] = Array(
+		"PARENT" => "RATING",
+		"NAME" => GetMessage("RATING_SHOW"),
+		"TYPE" => "CHECKBOX",
+	);
+	$arComponentParameters["PARAMETERS"]["RATINGVALUE"] = Array(
+		"PARENT" => "RATING",
+		"NAME" => GetMessage("ratingValue"),
+		"TYPE" => "STRING",
+		"SORT" => 500,
+		"DEFAULT" => "",
+	);
+	$arComponentParameters["PARAMETERS"]["RAITINGCOUNT"] = Array(
+			"PARENT" => "RATING",
+			"NAME" => GetMessage("ratingCount"),
+			"TYPE" => "STRING",
+			"SORT" => 500,
+			"DEFAULT" => "",
+	);
+	$arComponentParameters["PARAMETERS"]["REVIEWCOUNT"] = Array(
+			"PARENT" => "RATING",
+			"NAME" => GetMessage("reviewCount"),
+			"TYPE" => "STRING",
+			"SORT" => 500,
+			"DEFAULT" => "",
+	);
+	$arComponentParameters["PARAMETERS"]["BESTRATING"] = Array(
+			"PARENT" => "RATING",
+			"NAME" => GetMessage("bestRating"),
+			"TYPE" => "STRING",
+			"SORT" => 500,
+			"DEFAULT" => "5",
+	);
+	$arComponentParameters["PARAMETERS"]["WORSTRATING"] = Array(
+			"PARENT" => "RATING",
+			"NAME" => GetMessage("worstRating"),
+			"TYPE" => "STRING",
+			"SORT" => 500,
+			"DEFAULT" => "1",
+	);
+}
+//END RATING
