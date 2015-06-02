@@ -47,7 +47,9 @@
 				"SITE" => $arParams['ITEMREVIEWED_SITE'],
 				"LOGO" => $arParams['ITEMREVIEWED_LOGO'],
 				"ITEMPROP" => "itemReviewed",
-			)
+			),
+            false,
+            array('HIDE_ICONS' => 'Y')
 		);?>
 	<?endif?>
 
