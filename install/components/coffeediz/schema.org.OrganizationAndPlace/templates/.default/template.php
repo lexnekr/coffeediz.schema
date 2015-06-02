@@ -120,7 +120,9 @@
 			"BESTRATING" => $arParams['BESTRATING'],
 			"WORSTRATING" => $arParams['WORSTRATING'],
 			"ITEMPROP" => "Y"
-		)
+		),
+        false,
+        array('HIDE_ICONS' => 'Y')
 	);?>
 	<?endif?>
 
