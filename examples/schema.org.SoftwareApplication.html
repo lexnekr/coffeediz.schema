@@ -1,0 +1,56 @@
+﻿<head lang="ru-RU">
+	<meta name="viewport" content="width=device-width" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Микроразметка Schema.org - Программы</title>
+<head>
+
+<body>
+
+	<h1>Пример микроразметки Schema.org Программы</h1>
+
+<table border="1" cellpadding="5" cellspacing="0" class="">
+<tbody>
+<tr>
+	<td style="width: 50%;">
+		 <b>Реальный код</b>
+	</td>
+	<td style="width: 50%;">
+		 <b>Образец реального кода</b>
+	</td>
+</tr>
+<tr>
+	<td>
+		<div itemscope itemtype="http://schema.org/SoftwareApplication">
+			<p itemprop="name">1С-Битрикс "Стандарт"</p> <!-- Название -->
+			<p itemprop="description">1С-Битрикс "Стандарт" (версия 15.0)</p> <!-- Краткое и содержательное описание программного продукта (ОБЯЗАТЕЛЬНОЕ для валидации Яндексом) -->
+			<p itemprop="applicationCategory">CMS</p> <!-- Категория программы (Желательное для валидации Google) -->
+			<p itemprop="applicationSubCategory">1С-Битрикс</p> <!-- Подкатегория программы -->
+			<p itemprop="fileSize">50MB</p> <!-- Размер файла -->
+			<meta itemprop="interactionCount" content="UserDownloads:10000"> <!-- Количество скачиваний -->
+			<p itemprop="operatingSystem">LINUX | WINDOWS</p> <!-- Операционная система -->
+			<p itemprop="offers" itemscope="" itemtype="http://schema.org/Offer"> <!-- НАЧАЛО Предложения -->
+				<span itemprop="price">4990</span> <!-- Цена -->
+				<meta itemprop="priceCurrency" content="RUB"> <!-- Валюта в ISO 4217 -->
+			</p> <!-- КОНЕЦ Предложения -->
+		</div>
+	</td>
+	<td><code>
+&lt;div itemscope itemtype="http://schema.org/SoftwareApplication"&gt;<br>
+&nbsp; &nbsp;&lt;p itemprop="name"&gt;1С-Битрикс "Стандарт"&lt;/p&gt; <span style="color: #00a650;">&lt;!-- Название --&gt;</span><br>
+&nbsp; &nbsp;&lt;p itemprop="description"&gt;1С-Битрикс "Стандарт" (версия 15.0)&lt;/p&gt; <span style="color: #00a650;">&lt;!-- Краткое и содержательное описание программного продукта (ОБЯЗАТЕЛЬНОЕ для валидации Яндексом) --&gt;</span><br>
+&nbsp; &nbsp;&lt;p itemprop="applicationCategory"&gt;CMS&lt;/p&gt; <span style="color: #00a650;">&lt;!-- Категория программы (Желательное для валидации Google) --&gt;</span><br>
+&nbsp; &nbsp;&lt;p itemprop="applicationSubCategory"&gt;1С-Битрикс&lt;/p&gt; <span style="color: #00a650;">&lt;!-- Подкатегория программы --&gt;</span><br>
+&nbsp; &nbsp;&lt;p itemprop="fileSize"&gt;50MB&lt;/p&gt; <span style="color: #00a650;">&lt;!-- Размер файла --&gt;</span><br>
+&nbsp; &nbsp;&lt;meta itemprop="interactionCount" content="UserDownloads:10000"&gt; <span style="color: #00a650;">&lt;!-- Количество скачиваний --&gt;</span><br>
+&nbsp; &nbsp;&lt;p itemprop="operatingSystem"&gt;LINUX | WINDOWS&lt;/p&gt; <span style="color: #00a650;">&lt;!-- Операционная система --&gt;</span><br>
+&nbsp; &nbsp;&lt;p itemprop="offers" itemscope="" itemtype="http://schema.org/Offer"&gt; <span style="color: #00a650;">&lt;!-- НАЧАЛО Предложения --&gt;</span><br>
+&nbsp; &nbsp; &nbsp; &lt;span itemprop="price"&gt;4990&lt;/span&gt; <span style="color: #00a650;">&lt;!-- Цена --&gt;</span><br>
+&nbsp; &nbsp; &nbsp; &lt;meta itemprop="priceCurrency" content="RUB"&gt; <span style="color: #00a650;">&lt;!-- Валюта в ISO 4217 --&gt;</span><br>
+&nbsp; &nbsp;&lt;/p&gt; <span style="color: #00a650;">&lt;!-- КОНЕЦ Предложения --&gt;</span><br>
+&lt;/div&gt;
+	</code></td>
+</tr>
+</tbody>
+</table>
+
+<body>
