@@ -11,6 +11,9 @@
 -------
 * [coffeediz:schema.org.OrganizationAndPlace - Адрес организации/места](http://xn--80ahcjeib4ac4d.xn--p1ai/information/about_microcathode_say_a_word_how_to_implement_microcathode_module_coffeediz_schema_on_the_website_u/#OrganizationAndPlace) 
 * [coffeediz:breadcrumb (обёртка над bitrix:breadcrumb) - Хлебные крошки](http://xn--80ahcjeib4ac4d.xn--p1ai/information/about_microcathode_say_a_word_how_to_implement_microcathode_module_coffeediz_schema_on_the_website_u/#breadcrumb) 
+* [coffeediz:schema.org.AggregateRating - Рейтинг](http://xn--80ahcjeib4ac4d.xn--p1ai/information/microdesmidae_module_coffeediz_schema_for_1c_bitrix_part_2_rating_images_program/#AggregateRating)
+* [coffeediz:schema.org.ImageObject - Изображение](http://xn--80ahcjeib4ac4d.xn--p1ai/information/microdesmidae_module_coffeediz_schema_for_1c_bitrix_part_2_rating_images_program/#ImageObject)
+* [coffeediz:schema.org.SoftwareApplication - Программы](http://xn--80ahcjeib4ac4d.xn--p1ai/information/microdesmidae_module_coffeediz_schema_for_1c_bitrix_part_2_rating_images_program/#SoftwareApplication)
 
 **Адрес организации/места**
 -------
