@@ -5,11 +5,15 @@
 * coffeediz:breadcrumb (обёртка над bitrix:breadcrumb) - Хлебные крошки
 * coffeediz:schema.org.AggregateRating - Рейтинг (*рекомендуется к использовнаию как свойство для других схем!*)
 * coffeediz:schema.org.ImageObject - Изображение
+* coffeediz:schema.org.SoftwareApplication - Программы
  
 Документация
 -------
 * [coffeediz:schema.org.OrganizationAndPlace - Адрес организации/места](http://xn--80ahcjeib4ac4d.xn--p1ai/information/about_microcathode_say_a_word_how_to_implement_microcathode_module_coffeediz_schema_on_the_website_u/#OrganizationAndPlace) 
 * [coffeediz:breadcrumb (обёртка над bitrix:breadcrumb) - Хлебные крошки](http://xn--80ahcjeib4ac4d.xn--p1ai/information/about_microcathode_say_a_word_how_to_implement_microcathode_module_coffeediz_schema_on_the_website_u/#breadcrumb) 
+* [coffeediz:schema.org.AggregateRating - Рейтинг](http://xn--80ahcjeib4ac4d.xn--p1ai/information/microdesmidae_module_coffeediz_schema_for_1c_bitrix_part_2_rating_images_program/#AggregateRating)
+* [coffeediz:schema.org.ImageObject - Изображение](http://xn--80ahcjeib4ac4d.xn--p1ai/information/microdesmidae_module_coffeediz_schema_for_1c_bitrix_part_2_rating_images_program/#ImageObject)
+* [coffeediz:schema.org.SoftwareApplication - Программы](http://xn--80ahcjeib4ac4d.xn--p1ai/information/microdesmidae_module_coffeediz_schema_for_1c_bitrix_part_2_rating_images_program/#SoftwareApplication)
 
 **Адрес организации/места**
 -------
@@ -104,6 +108,30 @@ coffeediz:schema.org.ImageObject
 * "Изображение описывает контент страницы"
 * Полный набор свойств "Ретинг" с передачей массива параметров компоненту coffeediz:schema.org.AggregateRating
 
+
+**Программы**
+-------
+coffeediz:schema.org.SoftwareApplication
+
+*шаблоны*:
+* .default - содержит ТОЛЬКО микроразметку и вывод данных (без оформления)
+
+*Суть* - статическая обёртка, оформляющая в виде микроразметки массив параметров компонента с автопроверкой заполненности обязательных полей (без которых поисковые системы Яндекс и Google считают микроразметку невалидной).
+
+*Поддерживаемые поля:*
+* *НЕ отображать на сайте (микроразметка видна только поисковикам, но не видна простым юзерам)*
+* Тип ПО
+* Название
+* Краткое и содержательное описание программного продукта (*ОБЯЗАТЕЛЬНОЕ для валидации Яндексом*)
+* Категория программы (*Желательное для валидации Google*)
+* Подкатегория программы
+* Размер и Единица измерения размера дистрибутива
+* Количество скачиваний
+* Операционная система
+* Цена и Валюта
+* Полный набор свойств "Ретинг" с передачей массива параметров компоненту coffeediz:schema.org.AggregateRating
+* <b>Для Мобильных приложений</b> - Особые требования (Сеть, другие приложения и т.п.)
+* <b>Для Веб приложений</b> - Требования к Браузеру
 
 
 Структура репозитория:
