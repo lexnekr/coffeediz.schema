@@ -3,9 +3,11 @@
 
 * coffeediz:schema.org.OrganizationAndPlace - Адрес организации/места
 * coffeediz:breadcrumb (обёртка над bitrix:breadcrumb) - Хлебные крошки
-* coffeediz:schema.org.AggregateRating - Рейтинг (*рекомендуется к использовнаию как свойство для других схем!*)
 * coffeediz:schema.org.ImageObject - Изображение
 * coffeediz:schema.org.SoftwareApplication - Программы
+* coffeediz:schema.org.Product - Продукт
+* coffeediz:schema.org.AggregateRating - Рейтинг (*рекомендуется к использовнаию как свойство для других схем!*)
+* coffeediz:schema.org.Offer - Предложение (*рекомендуется к использовнаию как свойство для других схем!*)
  
 Документация
 -------
