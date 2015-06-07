@@ -1,0 +1,52 @@
+<head lang="ru-RU">
+	<meta name="viewport" content="width=device-width" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Микроразметка Schema.org - Предложение</title>
+<head>
+
+<body>
+
+	<h1>Пример микроразметки Schema.org Предложения</h1>
+
+<table border="1" cellpadding="5" cellspacing="0" class="">
+<tbody>
+<tr>
+	<td style="width: 50%;">
+		 <b>Реальный код</b>
+	</td>
+	<td style="width: 50%;">
+		 <b>Образец реального кода</b>
+	</td>
+</tr>
+<tr>
+	<td>
+		<div itemscope="" itemtype="http://schema.org/Offer">
+			<span itemprop="price">199.5</span><!-- Цена -->
+			<meta itemprop="priceCurrency" content="RUB"><!-- Валюта в ISO 4217 -->
+			<meta itemprop="availability" content="http://schema.org/InStock"><!-- Наличие (в примере = "В наличии") -->
+			<meta itemprop="itemCondition" itemtype="http://schema.org/OfferItemCondition" content="http://schema.org/NewCondition"><!-- Состояние (в примере = "Новое") -->
+			<div>
+				<link itemprop="acceptedPaymentMethod" href="http://purl.org/goodrelations/v1#VISA"><!-- Способ оплаты (в примере поле множественное = VISA) -->
+				<link itemprop="acceptedPaymentMethod" href="http://purl.org/goodrelations/v1#MasterCard"><!-- Способ оплаты (в примере поле множественное = MasterCard) -->
+				<link itemprop="acceptedPaymentMethod" href="http://purl.org/goodrelations/v1#Cash"><!-- Способ оплаты (в примере поле множественное = Наличные) -->
+			</div>
+		</div>
+	</td>
+	<td><code>
+&lt;div itemscope="" itemtype="http://schema.org/Offer"&gt;<br>
+ &nbsp; &nbsp;&lt;span itemprop="price"&gt;199.5&lt;/span&gt;<span style="color: #00a650;">&lt;!-- Цена --&gt;</span><br>
+ &nbsp; &nbsp;&lt;meta itemprop="priceCurrency" content="RUB"&gt;<span style="color: #00a650;">&lt;!-- Валюта в ISO 4217 --&gt;</span><br>
+ &nbsp; &nbsp;&lt;meta itemprop="availability" content="http://schema.org/InStock"&gt;<span style="color: #00a650;">&lt;!-- Наличие (в примере = "В наличии") --&gt;</span><br>
+ &nbsp; &nbsp;&lt;meta itemprop="itemCondition" itemtype="http://schema.org/OfferItemCondition" content="http://schema.org/NewCondition"&gt;<span style="color: #00a650;">&lt;!-- Состояние (в примере = "Новое") --&gt;</span><br>
+ &nbsp; &nbsp;&lt;div&gt;<br>
+ &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;link itemprop="acceptedPaymentMethod" href="http://purl.org/goodrelations/v1#VISA"&gt;<span style="color: #00a650;">&lt;!-- Способ оплаты (в примере поле множественное = VISA) --&gt;</span><br>
+ &nbsp; &nbsp; &nbsp; &nbsp;&lt;link itemprop="acceptedPaymentMethod" href="http://purl.org/goodrelations/v1#MasterCard"&gt;<span style="color: #00a650;">&lt;!-- Способ оплаты (в примере поле множественное = MasterCard) --&gt;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;link itemprop="acceptedPaymentMethod" href="http://purl.org/goodrelations/v1#Cash"&gt;<span style="color: #00a650;">&lt;!-- Способ оплаты (в примере поле множественное = Наличные) --&gt;</span><br>
+ &nbsp; &nbsp;&lt;/div&gt;<br>
+ &lt;/div&gt;
+	</code></td>
+</tr>
+</tbody>
+</table>
+
+<body>
