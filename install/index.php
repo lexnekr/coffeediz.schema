@@ -18,10 +18,10 @@ Class coffeediz_schema extends CModule
 		include(dirname(__FILE__)."/version.php");
 		$this->MODULE_VERSION = $arModuleVersion["VERSION"];
 		$this->MODULE_VERSION_DATE = $arModuleVersion["VERSION_DATE"];
-		$this->MODULE_NAME = GetMessage("COFFEEDIZ_INSTALL_NAME");
-		$this->MODULE_DESCRIPTION = GetMessage("COFFEEDIZ_INSTALL_DESCRIPTION");
-		$this->PARTNER_NAME = GetMessage("SPER_PARTNER");
-		$this->PARTNER_URI = GetMessage("PARTNER_URI");
+		$this->MODULE_NAME = GetMessage("COFFEEDIZ_INSTALL_NAME_SCHEMA");
+		$this->MODULE_DESCRIPTION = GetMessage("COFFEEDIZ_INSTALL_DESCRIPTION_SCHEMA");
+		$this->PARTNER_NAME = GetMessage("SPER_PARTNER_SCHEMA");
+		$this->PARTNER_URI = GetMessage("PARTNER_URI_SCHEMA");
 	}
 	function InstallDB($install_wizard = true)
 	{

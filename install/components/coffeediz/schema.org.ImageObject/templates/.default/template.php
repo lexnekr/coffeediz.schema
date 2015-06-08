@@ -6,7 +6,7 @@
 	<?}?>
 <?else:?>
 
-<div itemscope itemtype="http://schema.org/ImageObject" <? if($arParams['TRUMBNAIL_TYPE'] == "Y") { echo 'itemprop="thumbnail"'; } ?> <? if($arParams['SHOW'] == "N") { echo 'style="display: none;"'; } ?> >
+<div itemscope itemtype="http://schema.org/ImageObject" <?if(!empty($arParams['ITEMPROP'])):?>itemprop="<?=$arParams['ITEMPROP']?>" <?endif?><?if($arParams['SHOW'] == "Y"):?>style="display: none;" <?endif?>>
 
 	<?if(!empty($arParams['CONTENTURL'])):?>
 		<img src="<?=$arParams['CONTENTURL']?>" itemprop="contentUrl" />
