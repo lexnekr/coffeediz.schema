@@ -2,17 +2,24 @@
 $MESS ['MAIN_PARAMS'] = "Основные параметры";
 $MESS ['TRUMBNAIL_PARAMS'] = "Параметры миниатюры"; 
 
-$MESS ['PARAM_SHOW'] = "Отображать на сайте";
-$MESS ['SHOW_VALUES_Y'] = "Да";
-$MESS ['SHOW_VALUES_IMG'] = "Только изображение (скрыть метаданные от пользователей)";
-$MESS ['SHOW_VALUES_N'] = "Скрыть всё, включая изображение";
+$MESS ['PARAM_SHOW'] = "Скрыть от пользователей";
+$MESS ['SHOW_VALUES_Y'] = "Скрыть всё, включая изображение";
+$MESS ['SHOW_VALUES_IMG'] = "Аоказать только изображение (скрыть метаданные от пользователей)";
+$MESS ['SHOW_VALUES_N'] = "Показать всё";
 $MESS ['CONTENTURL'] = "Ссылка на изображение";
 $MESS ['NAME'] = "Название картинки";
 $MESS ['CAPTION'] = "Подпись к картинке";
 $MESS ['DESCRIPTION'] = "Описание изображения";
 $MESS ['HEIGHT'] = "Высота изображения (px)";
 $MESS ['WIDTH'] = "Ширина изображения (px)";
-$MESS ['TRUMBNAIL_TYPE'] = "Является миниатюрой";
+$MESS ['ITEMPROP'] = "Является свойством другого объекта Schema.org";
+$MESS ['ITEMPROP_thumbnail'] = "Миниатютра";
+$MESS ['ITEMPROP_image'] = "Изображение";
+$MESS ['ITEMPROP_logo'] = "Логотип";
+$MESS ['ITEMPROP_diagram'] = "Диаграмма";
+$MESS ['ITEMPROP_photo'] = "Фото";
+$MESS ['ITEMPROP_primaryImageOfPage'] = "Основное изображение страницы";
+$MESS ['ITEMPROP_screenshot'] = "Скриншот";
 
 $MESS ['TRUMBNAIL_CONTENTURL'] = "Ссылка на миниатюру";
 $MESS ['REPRESENTATIVEOFPAGE'] = "Изображение описывает контент страницы";

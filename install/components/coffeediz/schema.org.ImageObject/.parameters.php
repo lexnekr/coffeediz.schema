@@ -35,6 +35,7 @@ $arComponentParameters = array(
 				"IMG" => GetMessage("SHOW_VALUES_IMG"),
 				"N" => GetMessage("SHOW_VALUES_N"),
 			),
+            "DEFAULT" => "N",
 		),
 		"CONTENTURL" => array(
 			"PARENT" => "MAIN_PARAMS",
@@ -91,11 +92,21 @@ $arComponentParameters = array(
 		),
 
 
-		"TRUMBNAIL_TYPE" => array(
-			"PARENT" => "ADDITIONAL_SETTINGS",
-			"NAME" => GetMessage("TRUMBNAIL_TYPE"),
-			"TYPE" => "CHECKBOX",
-		),
+        "ITEMPROP" => array(
+            "PARENT" => "ADDITIONAL_SETTINGS",
+            "NAME" => GetMessage("ITEMPROP"),
+            "TYPE" => "LIST",
+            "VALUES" => array(
+                "" => "-",
+                "itemprop" => GetMessage("ITEMPROP_thumbnail"),
+                "image" => GetMessage("ITEMPROP_image"),
+                "logo" => GetMessage("ITEMPROP_logo"),
+                "diagram" => GetMessage("ITEMPROP_diagram"),
+                "photo" => GetMessage("ITEMPROP_photo"),
+                "primaryImageOfPage" => GetMessage("ITEMPROP_primaryImageOfPage"),
+                "screenshot" => GetMessage("ITEMPROP_screenshot"),
+            ),
+        ),
 		"REPRESENTATIVEOFPAGE" => array(
 			"PARENT" => "ADDITIONAL_SETTINGS",
 			"NAME" => GetMessage("REPRESENTATIVEOFPAGE"),
