@@ -1,0 +1,74 @@
+<head lang="ru-RU">
+	<meta name="viewport" content="width=device-width" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Микроразметка Schema.org - Продукт (с рейтингом)</title>
+<head>
+
+<body>
+
+	<h1>Пример микроразметки Schema.org Продукт (с рейтингом)</h1>
+
+<table border="1" cellpadding="5" cellspacing="0" class="">
+<tbody>
+<tr>
+	<td style="width: 50%;">
+		 <b>Реальный код</b>
+	</td>
+	<td style="width: 50%;">
+		 <b>Образец реального кода</b>
+	</td>
+</tr>
+<tr>
+	<td>
+		<div itemscope itemtype="http://schema.org/Product">
+			<p itemprop="name">Коммерческая поддержка модуля "Микроразметка Schema.org" для 1С-Битрикс</p> <!-- Название Продукта -->
+			<p itemprop="description">1 нормочас коммерческой поддерджки может быть использован на частную консультацию, разработку кастомного функционала или внедрение модуля на сайте клиента</p> <!-- Описание продукта -->
+			<div itemscope itemtype="http://schema.org/Offer" itemprop="offers"> <!-- Начало ПРЕДЛОЖЕНИЯ -->
+				<span itemprop="price">1200</span> <!-- Цена -->
+				<meta itemprop="priceCurrency" content="RUB"> <!-- Валюта в ISO 4217 -->
+				<meta itemprop="availability" content="http://schema.org/OnlineOnly"> <!-- Наличие (В примере = "Только Онлайн") -->
+				<meta itemprop="itemCondition" content="http://schema.org/NewCondition"> <!-- Состояние (В примере = "Новое") -->
+				<div>
+					<link itemprop="acceptedPaymentMethod" href="http://purl.org/goodrelations/v1#VISA"> <!-- Способ оплаты (в примере поле множественное = VISA) -->
+					<link itemprop="acceptedPaymentMethod" href="http://purl.org/goodrelations/v1#MasterCard"> <!-- Способ оплаты (в примере поле множественное = MasterCard) -->
+					<link itemprop="acceptedPaymentMethod" href="http://purl.org/goodrelations/v1#Cash"> <!-- Способ оплаты (в примере поле множественное = Наличные) -->
+				</div>
+			</div> <!-- Конец ПРЕДЛОЖЕНИЯ -->
+			<div itemscope itemtype="http://schema.org/AggregateRating" itemprop="aggregateRating"> <!-- Начало РЕЙТИНГА -->
+				<div itemprop="ratingValue">9.5</div> <!-- Значение рейтинга -->
+				<div itemprop="bestRating">10</div> <!-- Максимальное Значение рейтинга -->
+				<div itemprop="worstRating">1</div> <!-- Минимальное Значение рейтинга -->
+				<div itemprop="ratingCount">90</div> <!-- Число голосов -->
+				<div itemprop="reviewCount">13</div> <!-- Число отзывов -->
+			</div><!-- Конец РЕЙТИНГА -->
+		</div>
+	</td>
+	<td><code>
+&lt;div itemscope itemtype="http://schema.org/Product"&gt;<br>
+ &nbsp; &nbsp;&lt;p itemprop="name"&gt;Коммерческая поддержка модуля "Микроразметка Schema.org" для 1С-Битрикс&lt;/p&gt; <span style="color: #00a650;">&lt;!-- Название Продукта --&gt;</span><br>
+ &nbsp; &nbsp;&lt;p itemprop="description"&gt;1 нормочас коммерческой поддерджки может быть использован на частную консультацию, разработку кастомного функционала или внедрение модуля на сайте клиента&lt;/p&gt; <span style="color: #00a650;">&lt;!-- Описание продукта --&gt;</span><br>
+ &nbsp; &nbsp;&lt;div itemscope itemtype="http://schema.org/Offer" itemprop="offers"&gt; <span style="color: #00a650;">&lt;!-- Начало ПРЕДЛОЖЕНИЯ --&gt;</span><br>
+ &nbsp; &nbsp; &nbsp; &lt;span itemprop="price"&gt;1200&lt;/span&gt; <span style="color: #00a650;">&lt;!-- Цена --&gt;</span><br>
+ &nbsp; &nbsp; &nbsp; &lt;meta itemprop="priceCurrency" content="RUB"&gt; <span style="color: #00a650;">&lt;!-- Валюта в ISO 4217 --&gt;</span><br>
+ &nbsp; &nbsp; &nbsp; &lt;meta itemprop="availability" content="http://schema.org/OnlineOnly"&gt; <span style="color: #00a650;">&lt;!-- Наличие (В примере = "Только Онлайн") --&gt;</span><br>
+ &nbsp; &nbsp; &nbsp; &lt;meta itemprop="itemCondition" itemtype="http://schema.org/OfferItemCondition" content="http://schema.org/NewCondition"&gt; <span style="color: #00a650;">&lt;!-- Состояние (В примере = "Новое") --&gt;</span><br>
+ &nbsp; &nbsp; &nbsp; &lt;div&gt;<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;link itemprop="acceptedPaymentMethod" href="http://purl.org/goodrelations/v1#VISA"&gt; <span style="color: #00a650;">&lt;!-- Способ оплаты (в примере поле множественное = VISA) --&gt;</span><br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;link itemprop="acceptedPaymentMethod" href="http://purl.org/goodrelations/v1#MasterCard"&gt; <span style="color: #00a650;">&lt;!-- Способ оплаты (в примере поле множественное = MasterCard) --&gt;</span><br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;link itemprop="acceptedPaymentMethod" href="http://purl.org/goodrelations/v1#Cash"&gt; <span style="color: #00a650;">&lt;!-- Способ оплаты (в примере поле множественное = Наличные) --&gt;</span><br>
+ &nbsp; &nbsp; &nbsp; &lt;/div&gt;<br>
+ &nbsp; &nbsp;&lt;/div&gt; <span style="color: #00a650;">&lt;!-- Конец ПРЕДЛОЖЕНИЯ --&gt;</span><br>
+&nbsp; &nbsp;&lt;div itemscope itemtype="http://schema.org/AggregateRating" itemprop="aggregateRating"&gt; <span style="color: #00a650;">&lt;!-- Начало РЕЙТИНГА --&gt;</span><br>
+&nbsp; &nbsp; &nbsp; &lt;div itemprop="ratingValue"&gt;9.5&lt;/div&gt; <span style="color: #00a650;">&lt;!-- Значение рейтинга --&gt;</span><br>
+&nbsp; &nbsp; &nbsp; &lt;div itemprop="bestRating"&gt;10&lt;/div&gt; <span style="color: #00a650;">&lt;!-- Максимальное Значение рейтинга --&gt;</span><br>
+&nbsp; &nbsp; &nbsp; &lt;div itemprop="worstRating"&gt;1&lt;/div&gt; <span style="color: #00a650;">&lt;!-- Минимальное Значение рейтинга --&gt;</span><br>
+&nbsp; &nbsp; &nbsp; &lt;div itemprop="ratingCount"&gt;90&lt;/div&gt; <span style="color: #00a650;">&lt;!-- Число голосов --&gt;</span><br>
+&nbsp; &nbsp; &nbsp; &lt;div itemprop="reviewCount"&gt;13&lt;/div&gt; <span style="color: #00a650;">&lt;!-- Число отзывов --&gt;</span><br>
+&nbsp; &nbsp;&lt;/div&gt;<span style="color: #00a650;">&lt;!-- Конец РЕЙТИНГА --&gt;</span><br>
+&nbsp;&lt;/div&gt;
+	</code></td>
+</tr>
+</tbody>
+</table>
+
+<body>
