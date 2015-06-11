@@ -6,7 +6,9 @@
 * coffeediz:schema.org.ImageObject - Изображение
 * coffeediz:schema.org.SoftwareApplication - Программы
 * coffeediz:schema.org.Product - Продукт
+* coffeediz:schema.org.Article - Статья
 * coffeediz:breadcrumb (обёртка над bitrix:breadcrumb) - Хлебные крошки
+* coffeediz:schema.org.Person - Персона (*рекомендуется к использовнаию как свойство для других схем!*)
 * coffeediz:schema.org.AggregateRating - Рейтинг (*рекомендуется к использовнаию как свойство для других схем!*)
 * coffeediz:schema.org.Offer - Предложение (*рекомендуется к использовнаию как свойство для других схем!*)
  

@@ -1,4 +1,5 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+$this->setFrameMode(true);?>
 
 <?if(!empty($arResult['ERRORS'])):?>
 	<?foreach($arResult['ERRORS'] as $arErrors){?>
@@ -6,7 +7,7 @@
 	<?}?>
 <?else:?>
 
-<div itemscope itemtype="http://schema.org/<?if(!empty($arParams['TYPE'])):?><?=$arParams['TYPE']?><?else:?>SoftwareApplication<?endif?>" <? if($arParams['SHOW'] == "Y") { echo 'style="display: none;"'; } ?> >
+    <div itemscope itemtype="http://schema.org/<?if(!empty($arParams['TYPE'])):?><?=$arParams['TYPE']?><?else:?>SoftwareApplication<?endif?>" <? if($arParams['SHOW'] == "Y") { echo 'style="display: none;"'; } ?> >
 
 
 

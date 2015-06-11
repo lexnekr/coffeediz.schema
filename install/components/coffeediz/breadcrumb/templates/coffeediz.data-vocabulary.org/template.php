@@ -1,4 +1,5 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+$this->setFrameMode(true);?>
 
 <div class="bx_breadcrumbs" <?if ($arParams["SHOW"] == "Y"):?>style="display: none;"<?endif?>>
 
