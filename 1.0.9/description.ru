@@ -1,0 +1,1 @@
+<p>Незначительные исправления и доработки по <a href="https://github.com/lexnekr/coffeediz.schema/commit/1544f7b7890d2389b1189f7e7f8d1f896e415f2b">списку Issue</a></p>
