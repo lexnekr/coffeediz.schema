@@ -79,7 +79,25 @@ $this->setFrameMode(true);?>
 
 	<?if(!empty($arParams['LOGO'])) { ?>
 		<div>
-			<img itemprop="logo" src="<?=$arParams['LOGO']?>" />
+            <?$APPLICATION->IncludeComponent(
+                "coffeediz:schema.org.ImageObject",
+                "",
+                Array(
+                    "CONTENTURL" => $arParams['LOGO'],
+                    "NAME" => $arParams['LOGO_NAME'],
+                    "CAPTION" => $arParams['LOGO_CAPTION'],
+                    "DESCRIPTION" => $arParams['LOGO_DESCRIPTION'],
+                    "HEIGHT" => $arParams['LOGO_HEIGHT'],
+                    "WIDTH" => $arParams['LOGO_WIDTH'],
+                    "TRUMBNAIL_CONTENTURL" => $arParams['LOGO_TRUMBNAIL_CONTENTURL'],
+                    "TRUMBNAIL_TYPE" => "N",
+                    "REPRESENTATIVEOFPAGE" => "",
+                    "PARAM_RATING_SHOW" => "N",
+                    "ITEMPROP" => "logo",
+                ),
+                false,
+                array('HIDE_ICONS' => 'Y')
+            );?>
 		</div>
 	<? } ?>
 
