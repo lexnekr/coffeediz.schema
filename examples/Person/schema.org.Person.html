@@ -1,0 +1,76 @@
+﻿<head lang="ru-RU">
+	<meta name="viewport" content="width=device-width" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Микроразметка Schema.org - Персона</title>
+<head>
+
+<body>
+
+	<h1>Пример микроразметки Schema.org Персона</h1>
+
+<table border="1" cellpadding="5" cellspacing="0" class="">
+<tbody>
+<tr>
+	<td style="width: 50%;">
+		 <b>Реальный код</b>
+	</td>
+	<td style="width: 50%;">
+		 <b>Образец реального кода</b>
+	</td>
+</tr>
+<tr>
+	<td>
+		<div itemscope itemtype="http://schema.org/Person">
+		   <p itemprop="name">Алексей</p> <!-- Имя -->
+		   <p itemprop="additionalName"> Владимирович</p> <!-- Отчество -->
+		   <p itemprop="familyName"> Задойный</p> <!-- Фамилия -->
+		  <p itemprop="jobTitle">веб-мастер</p> <!-- Должность -->
+		   <div>
+			  <a href="http://кофедизайн.рф/information/about/Aleksey/" itemprop="sameAs">кофедизайн.рф/information/about/Aleksey/</a>, <!-- Адрес оффициальной веб-страницы (вроде wikipedia), множественное -->
+			  <a href="http://habrahabr.ru/users/lexnekr/" itemprop="sameAs">habrahabr.ru/users/lexnekr/</a> <!-- Адрес оффициальной веб-страницы (вроде wikipedia), множественное -->
+		   </div>
+		   <div>
+			  <a href="http://github.com/lexnekr" itemprop="url">github.com/lexnekr</a>, <!-- Адрес веб-страницы, множественное -->
+			  <a href="http://twitter.com/lexnekr" itemprop="url">twitter.com/lexnekr</a>, <!-- Адрес веб-страницы, множественное -->
+			  <a href="http://plus.google.com/+АлексейЗадойный" itemprop="url">plus.google.com/+АлексейЗадойный</a> <!-- Адрес веб-страницы, множественное -->
+		   </div>
+		   <div>
+			  <span itemprop="telephone">8(495)123-45-67</span>, <!-- телефон, множественное -->
+			  <span itemprop="telephone">+7(926)12-34-567</span> <!-- телефон, множественное -->
+		   </div>
+		   <div>
+			  <span itemprop="email">a@coffeediz.ru</span>, <!-- e-mail, множественное -->
+			  <span itemprop="email">avz@bitrix24.ru</span> <!-- e-mail, множественное -->
+		   </div>
+		</div>
+	</td>
+	<td><code>
+		&lt;div itemscope itemtype="http://schema.org/Person"&gt;<br>
+		 &nbsp; &nbsp;&lt;p itemprop="name"&gt;Алексей&lt;/p&gt; <span style="color: #00a650;">&lt;!-- Имя --&gt;</span><br>
+		 &nbsp; &nbsp;&lt;p itemprop="additionalName"&gt; Владимирович&lt;/p&gt; <span style="color: #00a650;">&lt;!-- Отчество --&gt;</span><br>
+		 &nbsp; &nbsp;&lt;p itemprop="familyName"&gt; Задойный&lt;/p&gt; <span style="color: #00a650;">&lt;!-- Фамилия --&gt;<br>
+		 </span> &nbsp;&nbsp;&lt;p itemprop="jobTitle"&gt;веб-мастер&lt;/p&gt;&nbsp;<span style="color: #00a650;">&lt;!-- Должность&nbsp;--&gt;</span><br>
+		 &nbsp; &nbsp;&lt;div&gt;<br>
+		 &nbsp; &nbsp; &nbsp; &lt;a href="http://кофедизайн.рф/information/about/Aleksey/" itemprop="sameAs"&gt;кофедизайн.рф/information/about/Aleksey/&lt;/a&gt;, <span style="color: #00a650;">&lt;!-- Адрес оффициальной веб-страницы (вроде wikipedia), множественное --&gt;</span><br>
+		 &nbsp; &nbsp; &nbsp; &lt;a href="http://habrahabr.ru/users/lexnekr/" itemprop="sameAs"&gt;habrahabr.ru/users/lexnekr/&lt;/a&gt; <span style="color: #00a650;">&lt;!-- Адрес оффициальной веб-страницы (вроде wikipedia), множественное --&gt;</span><br>
+		 &nbsp; &nbsp;&lt;/div&gt;<br>
+		 &nbsp; &nbsp;&lt;div&gt;<br>
+		 &nbsp; &nbsp; &nbsp; &lt;a href="http://github.com/lexnekr" itemprop="url"&gt;github.com/lexnekr&lt;/a&gt;, <span style="color: #00a650;">&lt;!-- Адрес веб-страницы, множественное --&gt;</span><br>
+		 &nbsp; &nbsp; &nbsp; &lt;a href="http://twitter.com/lexnekr" itemprop="url"&gt;twitter.com/lexnekr&lt;/a&gt;, <span style="color: #00a650;">&lt;!-- Адрес веб-страницы, множественное --&gt;</span><br>
+		 &nbsp; &nbsp; &nbsp; &lt;a href="http://plus.google.com/+АлексейЗадойный" itemprop="url"&gt;plus.google.com/+АлексейЗадойный&lt;/a&gt; <span style="color: #00a650;">&lt;!-- Адрес веб-страницы, множественное --&gt;</span><br>
+		 &nbsp; &nbsp;&lt;/div&gt;<br>
+		 &nbsp; &nbsp;&lt;div&gt;<br>
+		 &nbsp; &nbsp; &nbsp; &lt;span itemprop="telephone"&gt;8(495)123-45-67&lt;/span&gt;, <span style="color: #00a650;">&lt;!-- телефон, множественное --&gt;</span><br>
+		 &nbsp; &nbsp; &nbsp; &lt;span itemprop="telephone"&gt;+7(926)12-34-567&lt;/span&gt; <span style="color: #00a650;">&lt;!-- телефон, множественное --&gt;</span><br>
+		 &nbsp; &nbsp;&lt;/div&gt;<br>
+		 &nbsp; &nbsp;&lt;div&gt;<br>
+		 &nbsp; &nbsp; &nbsp; &lt;span itemprop="email"&gt;a@coffeediz.ru&lt;/span&gt;, <span style="color: #00a650;">&lt;!-- e-mail, множественное --&gt;</span><br>
+		 &nbsp; &nbsp; &nbsp; &lt;span itemprop="email"&gt;avz@bitrix24.ru&lt;/span&gt; <span style="color: #00a650;">&lt;!-- e-mail, множественное --&gt;</span><br>
+		 &nbsp; &nbsp;&lt;/div&gt;<br>
+		 &lt;/div&gt;
+	</code></td>
+</tr>
+</tbody>
+</table>
+
+<body>
