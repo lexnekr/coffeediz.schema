@@ -1,0 +1,46 @@
+﻿<head lang="ru-RU">
+	<meta name="viewport" content="width=device-width" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Микроразметка Schema.org - Статья (с простым Автором)</title>
+<head>
+
+<body>
+
+	<h1>Пример микроразметки Schema.org Статьи (с простым Автором)</h1>
+
+<table border="1" cellpadding="5" cellspacing="0" class="">
+<tbody>
+<tr>
+	<td style="width: 50%;">
+		 <b>Реальный код</b>
+	</td>
+	<td style="width: 50%;">
+		 <b>Образец реального кода</b>
+	</td>
+</tr>
+<tr>
+	<td>
+		<div itemscope itemtype="http://schema.org/Article">
+			<p itemprop="name">Название Статьи</p> <!-- Название статьи (имеет приоритет перед name для Яндекса) -->
+			<meta itemprop="headline" content="Название Статьи"> <!-- Название статьи -->
+			<p itemprop="articleBody">Обязательное краткое описание статьи для Яндекса длиной от 50 до 150 символов.</p> <!-- Краткое описание статьи (имеет приоритет перед description для Яндекса) -->
+			<meta itemprop="description" content="Обязательное краткое описание статьи для Яндекса длиной от 50 до 150 символов."> <!-- Краткое описание статьи -->
+			<p itemprop="genre">Техническая</p> <!-- Жанр (множественное) -->
+			<p itemprop="author">Задойный А.В.</p> <!-- Автор (краткое) -->
+		</div>
+	</td>
+	<td><code>
+		&lt;div itemscope itemtype="http://schema.org/Article"&gt;<br>
+		&nbsp; &nbsp;&lt;p itemprop="name"&gt;Название Статьи&lt;/p&gt; <span style="color: #00a650;">&lt;!-- Название статьи (имеет приоритет перед name для Яндекса) --&gt;</span><br>
+		&nbsp; &nbsp;&lt;meta itemprop="headline" content="Название Статьи"&gt; <span style="color: #00a650;">&lt;!-- Название статьи --&gt;</span><br>
+		&nbsp; &nbsp;&lt;p itemprop="articleBody"&gt;Обязательное краткое описание статьи для Яндекса длиной от 50 до 150 символов.&lt;/p&gt; <span style="color: #00a650;">&lt;!-- Краткое описание статьи (имеет приоритет перед description для Яндекса) --&gt;</span><br>
+		&nbsp; &nbsp;&lt;meta itemprop="description" content="Обязательное краткое описание статьи для Яндекса длиной от 50 до 150 символов."&gt; <span style="color: #00a650;">&lt;!-- Краткое описание статьи --&gt;</span><br>
+		&nbsp; &nbsp;&lt;p itemprop="genre"&gt;Техническая&lt;/p&gt; <span style="color: #00a650;">&lt;!-- Жанр (множественное) --&gt;</span><br>
+		&nbsp; &nbsp;&lt;p itemprop="author"&gt;Задойный А.В.&lt;/p&gt; <span style="color: #00a650;">&lt;!-- Автор (краткое) --&gt;</span><br>
+		&lt;/div&gt;
+	</code></td>
+</tr>
+</tbody>
+</table>
+
+<body>
