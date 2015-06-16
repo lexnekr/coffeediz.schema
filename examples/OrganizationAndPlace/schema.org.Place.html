@@ -1,0 +1,64 @@
+﻿<head lang="ru-RU">
+	<meta name="viewport" content="width=device-width" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Микроразметка Schema.org - Место</title>
+<head>
+
+<body>
+
+	<h1>Пример микроразметки Schema.org Места</h1>
+
+<table border="1" cellpadding="5" cellspacing="0" class="">
+<tbody>
+<tr>
+	<td style="width: 50%;">
+		 <b>Реальный код</b>
+	</td>
+	<td style="width: 50%;">
+		 <b>Образец реального кода</b>
+	</td>
+</tr>
+<tr>
+	<td>
+		<div itemscope itemtype="http://schema.org/Place">
+		   <div itemprop="name">Дом №1 на Красной Площади</div> <!-- Название Места  -->
+		   <div itemprop="description">Историческое здание в Центре Москвы, выходящее на Красную площадь, где разместился Исторический Музей</div> <!-- Описание Места -->
+		   <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"> <!-- Начало почтового адреса -->
+			  <div itemprop="postalCode">125009</div> <!-- Почтовый индекс -->
+			  <div itemprop="addressCountry">Россия</div> <!-- Страна (критично верное написание стран для валидации Яндекс-Справочником)-->
+			  <div itemprop="addressRegion">Московская область</div> <!-- Регион -->
+			  <div itemprop="addressLocality">Москва</div> <!-- Город -->
+			  <div itemprop="streetAddress">Красная площадь д1</div> <!-- Адрес -->
+		   </div> <!-- Окончание почтового адреса -->
+		   <div>
+			  <span itemprop="telephone">8 (495) 692-40-19</span>, <!-- Телефон Места (Множественное) -->
+			  <span itemprop="telephone">8 (495) 692-68-17</span> <!-- Телефон Места (Множественное) -->
+		   </div>
+		   <div><span itemprop="faxNumber">8(495)123-45-67</span></div>
+		   <div><a href="http://www.shm.ru/" itemprop="url">www.shm.ru</a></div> <!-- Сайт Места -->
+		</div>
+	</td>
+	<td><code>
+		&lt;div itemscope itemtype="http://schema.org/Place"&gt;<br>
+		&nbsp; &nbsp;&lt;div itemprop="name"&gt;Дом №1 на Красной Площади&lt;/div&gt; <span style="color: #00a650;">&lt;!-- Название Места &nbsp;--&gt;</span><br>
+		&nbsp; &nbsp;&lt;div itemprop="description"&gt;Дом №1 на Красной Площади&lt;/div&gt; <span style="color: #00a650;">&lt;!-- Описание Места --&gt;</span><br>
+		&nbsp; &nbsp;&lt;div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"&gt; <span style="color: #00a650;">&lt;!-- Начало почтового адреса --&gt;</span><br>
+		&nbsp; &nbsp; &nbsp; &lt;div itemprop="postalCode"&gt;142300&lt;/div&gt; <span style="color: #00a650;">&lt;!-- Почтовый индекс --&gt;</span><br>
+		&nbsp; &nbsp; &nbsp; &lt;div itemprop="addressCountry"&gt;Россия&lt;/div&gt;<span style="color: #00a650;"> &lt;!-- Страна (<span style="color: #f7941d;">критично&nbsp;верное написание стран для валидации Яндекс-Справочником</span>)--&gt;</span><br>
+		&nbsp; &nbsp; &nbsp; &lt;div itemprop="addressRegion"&gt;Московская область&lt;/div&gt; <span style="color: #00a650;">&lt;!-- Регион --&gt;</span><br>
+		&nbsp; &nbsp; &nbsp; &lt;div itemprop="addressLocality"&gt;Москва&lt;/div&gt; <span style="color: #00a650;">&lt;!-- Город --&gt;</span><br>
+		&nbsp; &nbsp; &nbsp; &lt;div itemprop="streetAddress"&gt;Красная площадь д1&lt;/div&gt; <span style="color: #00a650;">&lt;!-- Адрес --&gt;</span><br>
+		&nbsp; &nbsp;&lt;/div&gt; <span style="color: #00a650;">&lt;!-- Окончание почтового адреса --&gt;</span><br>
+		&nbsp; &nbsp;&lt;div&gt;<br>
+		&nbsp; &nbsp; &nbsp; &lt;span itemprop="telephone"&gt;8(123)45-678-90&lt;/span&gt;, <span style="color: #00a650;">&lt;!-- Телефон Места (Множественное) --&gt;</span><br>
+		&nbsp; &nbsp; &nbsp; &lt;span itemprop="telephone"&gt;+7(926)123-45-67&lt;/span&gt; <span style="color: #00a650;">&lt;!-- Телефон Места (Множественное) --&gt;</span><br>
+		&nbsp; &nbsp;&lt;/div&gt;<br>
+		&nbsp; &nbsp;&lt;div&gt;&lt;span itemprop="faxNumber"&gt;8(495)123-45-67&lt;/span&gt;&lt;/div&gt;<br>
+		&nbsp; &nbsp;&lt;div&gt;&lt;a href="http://www.shm.ru/" itemprop="url"&gt;www.shm.ru&lt;/a&gt;&lt;/div&gt; <span style="color: #00a650;">&lt;!-- Сайт Места --&gt;</span><br>
+		&lt;/div&gt;
+	</code></td>
+</tr>
+</tbody>
+</table>
+
+<body>
