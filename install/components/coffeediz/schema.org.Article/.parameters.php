@@ -47,6 +47,23 @@ $arComponentParameters = array(
                 "MedicalScholarlyArticle" => GetMessage("TYPE_MedicalScholarlyArticle"),
             ),
         ),
+        "LEARNING_RESOURCE_TYPE" => array(
+            "PARENT" => "MAIN_PARAMS",
+            "NAME" => GetMessage("LEARNING_RESOURCE_TYPE"),
+            "TYPE" => "LIST",
+            "VALUES" => array(
+                "" => "-",
+                "AcademicThesis" => GetMessage("AcademicThesis"),
+                "BookReport" => GetMessage("BookReport"),
+                "Coursework" => GetMessage("Coursework"),
+                "Dissertation" => GetMessage("Dissertation"),
+                "Examination" => GetMessage("Examination"),
+                "StudentEssay" => GetMessage("StudentEssay"),
+                "StudentLaboratoryWork" => GetMessage("StudentLaboratoryWork"),
+                "StudentReport" => GetMessage("StudentReport"),
+                "StudentSummary" => GetMessage("StudentSummary"),
+            ),
+        ),
         "NAME" => array(
             "PARENT" => "MAIN_PARAMS",
             "NAME" => GetMessage("NAME"),
@@ -61,9 +78,52 @@ $arComponentParameters = array(
             "ROWS" => 5,
             "COLS" => "50",
         ),
+        "ABOUT" => array(
+            "PARENT" => "MAIN_PARAMS",
+            "NAME" => GetMessage("ABOUT"),
+            "TYPE" => "STRING",
+            "DEFAULT" => "",
+            "ROWS" => 5,
+            "COLS" => "50",
+        ),
         "GENRE" => array(
             "PARENT" => "MAIN_PARAMS",
             "NAME" => GetMessage("GENRE"),
+            "TYPE" => "STRING",
+            "DEFAULT" => "",
+        ),
+        "ARTICLE_SECTION" => array(
+            "PARENT" => "MAIN_PARAMS",
+            "NAME" => GetMessage("ARTICLE_SECTION"),
+            "TYPE" => "STRING",
+            "DEFAULT" => "",
+            "MULTIPLE" =>"Y",
+        ),
+        "KEYWORDS" => array(
+            "PARENT" => "MAIN_PARAMS",
+            "NAME" => GetMessage("KEYWORDS"),
+            "TYPE" => "STRING",
+            "DEFAULT" => "",
+            "MULTIPLE" =>"Y",
+        ),
+        "IN_LANGUAGE" => array(
+            "PARENT" => "MAIN_PARAMS",
+            "NAME" => GetMessage("IN_LANGUAGE"),
+            "TYPE" => "LIST",
+            "ADDITIONAL_VALUES" => "Y",
+            "VALUES" => array(
+                "" => "-",
+                "ru" => GetMessage("ru"),
+                "en" => GetMessage("en"),
+                "fr" => GetMessage("fr"),
+                "de" => GetMessage("de"),
+                "es" => GetMessage("es"),
+            ),
+            "DEFAULT" => "",
+        ),
+        "DATA_PUBLISHED" => array(
+            "PARENT" => "MAIN_PARAMS",
+            "NAME" => GetMessage("DATA_PUBLISHED"),
             "TYPE" => "STRING",
             "DEFAULT" => "",
         ),
@@ -78,6 +138,14 @@ $arComponentParameters = array(
                 "Person" => GetMessage("AUTHOR_TYPE_Person"),
                 "Organization" => GetMessage("AUTHOR_TYPE_Organization"),
             ),
+        ),
+        "IMAGEURL" => array(
+            "PARENT" => "MAIN_PARAMS",
+            "NAME" => GetMessage("IMAGEURL"),
+            "TYPE" => "STRING",
+            "SORT" => 500,
+            "DEFAULT" => "",
+            "REFRESH" => "Y",
         ),
 
 
@@ -648,3 +716,93 @@ if ($arCurrentValues["AUTHOR_ORGANIZATION_TYPE_3"] == "SportsActivityLocation")
 }
 //END WorksFor TYPE_4 level
 //END AUTHOR_TYPE_Organization
+
+
+//START SOURCE and REFERENCES of Article
+if ($arCurrentValues["TYPE"] == "ScholarlyArticle" or $arCurrentValues["TYPE"] == "MedicalScholarlyArticle")
+{
+    //START SOURCE of Article
+    $arComponentParameters["PARAMETERS"]["SOURCE_TYPE"] = Array(
+        "NAME" => GetMessage("SOURCE_TYPE"),
+        "TYPE" => "LIST",
+        "REFRESH" => "Y",
+        "SORT" => 50,
+        "VALUES" => array(
+            "SOURCE_TYPE_URL" => GetMessage("SOURCE_TYPE_URL"),
+            "SOURCE_TYPE_TEXT" => GetMessage("SOURCE_TYPE_TEXT"),
+        ),
+    );
+
+    if ($arCurrentValues["SOURCE_TYPE"] == "SOURCE_TYPE_URL")
+    {
+        $arComponentParameters["PARAMETERS"]["SOURCE_TYPE_URL_URL"] = Array(
+            "NAME" => GetMessage("SOURCE_TYPE_URL_URL"),
+            "TYPE" => "STRING",
+        );
+        $arComponentParameters["PARAMETERS"]["SOURCE_TYPE_URL_TEXT"] = Array(
+            "NAME" => GetMessage("SOURCE_TYPE_URL_TEXT"),
+            "TYPE" => "STRING",
+        );
+    }
+    elseif ($arCurrentValues["SOURCE_TYPE"] == "SOURCE_TYPE_TEXT")
+    {
+        $arComponentParameters["PARAMETERS"]["SOURCE_TYPE_TEXT_TEXT"] = Array(
+            "NAME" => GetMessage("SOURCE_TYPE_TEXT_TEXT"),
+            "TYPE" => "STRING",
+        );
+    }
+    //END SOURCE of Article
+
+    //START REFERENCES of Article
+    $arComponentParameters["PARAMETERS"]["REFERENCES_URLS"] = Array(
+        "NAME" => GetMessage("REFERENCES_URLS"),
+        "TYPE" => "STRING",
+        "MULTIPLE" =>"Y",
+    );
+    $arComponentParameters["PARAMETERS"]["REFERENCES_TEXTS"] = Array(
+        "NAME" => GetMessage("REFERENCES_TEXTS"),
+        "TYPE" => "STRING",
+        "MULTIPLE" =>"Y",
+    );
+    //END REFERENCES of Article
+}
+//END SOURCE and REFERENCES of Article
+
+
+//START IMAGE DETAIL
+if (!empty($arCurrentValues['IMAGEURL']))
+{
+    $arComponentParameters["PARAMETERS"]["IMAGE_NAME"] = Array(
+        "PARENT" => "IMAGE_PARAMS",
+        "NAME" => GetMessage("IMAGE_NAME"),
+        "TYPE" => "STRING",
+    );
+    $arComponentParameters["PARAMETERS"]["IMAGE_CAPTION"] = Array(
+        "PARENT" => "IMAGE_PARAMS",
+        "NAME" => GetMessage("IMAGE_CAPTION"),
+        "TYPE" => "STRING",
+    );
+    $arComponentParameters["PARAMETERS"]["IMAGE_DESCRIPTION"] = Array(
+        "PARENT" => "IMAGE_PARAMS",
+        "NAME" => GetMessage("IMAGE_DESCRIPTION"),
+        "TYPE" => "STRING",
+        "ROWS" => 5,
+        "COLS" => "50",
+    );
+    $arComponentParameters["PARAMETERS"]["IMAGE_HEIGHT"] = Array(
+        "PARENT" => "IMAGE_PARAMS",
+        "NAME" => GetMessage("IMAGE_HEIGHT"),
+        "TYPE" => "STRING",
+    );
+    $arComponentParameters["PARAMETERS"]["IMAGE_WIDTH"] = Array(
+        "PARENT" => "IMAGE_PARAMS",
+        "NAME" => GetMessage("IMAGE_WIDTH"),
+        "TYPE" => "STRING",
+    );
+    $arComponentParameters["PARAMETERS"]["IMAGE_TRUMBNAIL_CONTENTURL"] = Array(
+        "PARENT" => "IMAGE_PARAMS",
+        "NAME" => GetMessage("IMAGE_TRUMBNAIL_CONTENTURL"),
+        "TYPE" => "STRING",
+    );
+}
+//END IMAGE DETAIL
