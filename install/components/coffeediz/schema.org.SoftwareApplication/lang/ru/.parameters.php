@@ -3,6 +3,7 @@ $MESS ['MAIN_PARAMS'] = "Основные параметры";
 $MESS ['MOBILE_PARAMS'] = "Параметры для Мобильных приложений";
 $MESS ['WEB_PARAMS'] = "Параметры для Веб приложений";
 $MESS ['GAME_PARAMS'] = "Параметры для Игр";
+$MESS ['OFFER_PARAMS'] = "Доп. параметры Предложения";
 
 $MESS ['PARAM_SHOW'] = "НЕ отображать на сайте";
 $MESS ['TYPE'] = "Тип ПО";
@@ -10,6 +11,8 @@ $MESS ['SoftwareApplication'] = "Программа";
 $MESS ['MobileApplication'] = "Мобильное приложение";
 $MESS ['WebApplication'] = "Веб приложение";
 $MESS ['VideoGame'] = "Игра";
+$MESS ['ADDITIONAL_TYPE'] = "Дополнительный тип";
+$MESS ['Product'] = "Продукт (Товар)";
 $MESS ['NAME'] = "Название";
 $MESS ['DESCRIPTION'] = "Краткое и содержательное описание программного продукта (ОБЯЗАТЕЛЬНОЕ)";
 $MESS ['CATEGORY'] = "Категория программы";
@@ -35,6 +38,37 @@ $MESS ['ITEMPROP_itemReviewed'] = "Рейтинга/Отзывов";
 $MESS ['carrierRequirements'] = "Особые требования (Сеть, другие приложения и т.п.)";
 
 $MESS ['browserRequirements'] = "Требования к Браузеру";
+
+$MESS ['ItemAvailability'] = "Доступность";
+$MESS ['Discontinued'] = "Снято с производства";
+$MESS ['InStock'] = "В наличии";
+$MESS ['InStoreOnly'] = "Только в рознице";
+$MESS ['OnlineOnly'] = "Только онлайн";
+$MESS ['LimitedAvailability'] = "Уточняйте наличие";
+$MESS ['PreOrder'] = "Предзаказ";
+$MESS ['SoldOut'] = "Продано";
+$MESS ['OutOfStock'] = "Нет на складе";
+
+$MESS ['itemCondition'] = "Состояние товара";
+$MESS ['NewCondition'] = "Новое";
+$MESS ['UsedCondition'] = "БУ";
+$MESS ['DamagedCondition'] = "Повреждённое";
+$MESS ['RefurbishedCondition'] = "Восстановленное";
+
+$MESS ['PaymentMethod'] = "Способ оплаты";
+$MESS ['ByBankTransferInAdvance'] = "Банковский перевод";
+$MESS ['ByInvoice'] = "Счёт";
+$MESS ['Cash'] = "Наличные";
+$MESS ['CheckInAdvance'] = "Предоплата";
+$MESS ['COD'] = "Наложный платёж";
+$MESS ['DirectDebit'] = "Прямой дебет";
+$MESS ['GoogleCheckout'] = "GoogleCheckout";
+$MESS ['PayPal'] = "PayPal";
+$MESS ['PaySwarm'] = "PaySwarm";
+$MESS ['VISA'] = "VISA";
+$MESS ['MasterCard'] = "MasterCard";
+$MESS ['AmericanExpress'] = "AmericanExpress";
+
 $MESS [''] = "";
 $MESS [''] = "";
  ?>

@@ -19,7 +19,7 @@ $this->setFrameMode(true);?>
         <meta itemprop="availability" content="http://schema.org/<?=$arParams['ITEMAVAILABILITY']?>" />
     <?endif?>
     <?if(!empty($arParams['ITEMCONDITION'])):?>
-        <meta itemprop="itemCondition" itemtype="http://schema.org/OfferItemCondition" content="http://schema.org/<?=$arParams['ITEMCONDITION']?>"/>
+        <meta itemprop="itemCondition" content="http://schema.org/<?=$arParams['ITEMCONDITION']?>"/>
     <?endif?>
     <?if(!empty($arParams['PAYMENTMETHOD'])) { ?>
         <div>

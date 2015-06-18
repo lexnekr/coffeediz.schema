@@ -1,25 +1,20 @@
 <?
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
-CModule::IncludeModule("fileman");
-CMedialib::Init();
-
-$ar = CMedialibCollection::GetList(array('arFilter' => array('ACTIVE' => 'Y', 'PARENT_ID' => 0)));
-
-$arCollection = array();
-foreach($ar as $Collection){
-    $arCollection[$Collection['ID']] = $Collection['NAME'];
-}
 
 $arComponentParameters = array(
 	"GROUPS" => array(
 		"MAIN" => array(
 			"SORT" => 110,
-			"NAME" => "MAIN",
+			"NAME" => GetMessage("MAIN_PARAMS"),
 		),
 		"PARAMETERS" => array(
 			"SORT" => 120,
-			"NAME" => "PARAMETERS",
+			"NAME" => GetMessage("PARAMETERS_PARAMS"),
 		),
+        "LOGO_PARAMS" => array(
+            "SORT" => 120,
+            "NAME" => GetMessage("LOGO_PARAMS"),
+        ),
 		"RATING" => array(
 			"SORT" => 800,
 			"NAME" => GetMessage("RATING"),
@@ -43,74 +38,75 @@ $arComponentParameters = array(
 			)
 		),
 		"NAME" => array(
-			"PARENT" => "ADDITIONAL_SETTINGS",
+			"PARENT" => "PARAMETERS",
 			"NAME" => GetMessage("PARAM_NAME"),
 			"TYPE" => "STRING",
 			"SORT" => 500,
 		),
 		"POST_CODE" => array(
-			"PARENT" => "ADDITIONAL_SETTINGS",
+			"PARENT" => "PARAMETERS",
 			"NAME" => GetMessage("PARAM_POST_CODE"),
 			"TYPE" => "STRING",
 			"SORT" => 500,
 		),
 		"COUNTRY" => array(
-			"PARENT" => "ADDITIONAL_SETTINGS",
+			"PARENT" => "PARAMETERS",
 			"NAME" => GetMessage("PARAM_COUNTRY"),
 			"TYPE" => "STRING",
 			"SORT" => 500,
 		),
 		"REGION" => array(
-			"PARENT" => "ADDITIONAL_SETTINGS",
+			"PARENT" => "PARAMETERS",
 			"NAME" => GetMessage("PARAM_REGION"),
 			"TYPE" => "STRING",
 		),
 		"LOCALITY" => array(
-			"PARENT" => "ADDITIONAL_SETTINGS",
+			"PARENT" => "PARAMETERS",
 			"NAME" => GetMessage("PARAM_LOCALITY"),
 			"TYPE" => "STRING",
 		),
 		"ADDRESS" => array(
-			"PARENT" => "ADDITIONAL_SETTINGS",
+			"PARENT" => "PARAMETERS",
 			"NAME" => GetMessage("PARAM_ADDRESS"),
 			"TYPE" => "STRING",
 		),
 		"PHONE" => Array(
-			"PARENT" => "ADDITIONAL_SETTINGS",
+			"PARENT" => "PARAMETERS",
 			"NAME" => GetMessage("PARAM_PHONE"),
 			"TYPE" =>"STRING",
 			"MULTIPLE" =>"Y",
 		),
 		"FAX" => Array(
-			"PARENT" => "ADDITIONAL_SETTINGS",
+			"PARENT" => "PARAMETERS",
 			"NAME" => GetMessage("PARAM_FAX"),
 			"TYPE" =>"STRING",
 		),
 		"SITE" => Array(
-			"PARENT" => "ADDITIONAL_SETTINGS",
+			"PARENT" => "PARAMETERS",
 			"NAME" => GetMessage("PARAM_SITE"),
 			"TYPE" =>"STRING",
 		),
 		"LOGO" => Array(
-			"PARENT" => "ADDITIONAL_SETTINGS",
+			"PARENT" => "PARAMETERS",
 			"NAME" => GetMessage("LOGO"),
 			"TYPE" =>"STRING",
+            "REFRESH" => "Y",
 		),
 		"DESCRIPTION" => Array(
-			"PARENT" => "ADDITIONAL_SETTINGS",
+			"PARENT" => "PARAMETERS",
 			"NAME" => GetMessage("DESCRIPTION"),
 			"TYPE" =>"SRTING",
 			"ROWS" => 5,
 			"COLS" => "50",
 		),
 		"PARAM_RATING_SHOW" => array(
-			"PARENT" => "ADDITIONAL_SETTINGS",
+			"PARENT" => "PARAMETERS",
 			"NAME" => GetMessage("PARAM_RATING_SHOW"),
 			"TYPE" => "CHECKBOX",
 			"REFRESH" => "Y",
 		),
 		"ITEMPROP" => array(
-			"PARENT" => "ADDITIONAL_SETTINGS",
+			"PARENT" => "PARAMETERS",
 			"NAME" => GetMessage("itemprop"),
 			"TYPE" => "LIST",
 			"VALUES" => array(
@@ -829,3 +825,42 @@ if ($arCurrentValues["PARAM_RATING_SHOW"] == "Y")
 	);
 }
 //END RATING
+
+
+//START LOGO DETAIL
+if (!empty($arCurrentValues['LOGO']))
+{
+    $arComponentParameters["PARAMETERS"]["LOGO_NAME"] = Array(
+        "PARENT" => "LOGO_PARAMS",
+        "NAME" => GetMessage("LOGO_NAME"),
+        "TYPE" => "STRING",
+    );
+    $arComponentParameters["PARAMETERS"]["LOGO_CAPTION"] = Array(
+        "PARENT" => "LOGO_PARAMS",
+        "NAME" => GetMessage("LOGO_CAPTION"),
+        "TYPE" => "STRING",
+    );
+    $arComponentParameters["PARAMETERS"]["LOGO_DESCRIPTION"] = Array(
+        "PARENT" => "LOGO_PARAMS",
+        "NAME" => GetMessage("LOGO_DESCRIPTION"),
+        "TYPE" => "STRING",
+        "ROWS" => 5,
+        "COLS" => "50",
+    );
+    $arComponentParameters["PARAMETERS"]["LOGO_HEIGHT"] = Array(
+        "PARENT" => "LOGO_PARAMS",
+        "NAME" => GetMessage("LOGO_HEIGHT"),
+        "TYPE" => "STRING",
+    );
+    $arComponentParameters["PARAMETERS"]["LOGO_WIDTH"] = Array(
+        "PARENT" => "LOGO_PARAMS",
+        "NAME" => GetMessage("LOGO_WIDTH"),
+        "TYPE" => "STRING",
+    );
+    $arComponentParameters["PARAMETERS"]["LOGO_TRUMBNAIL_CONTENTURL"] = Array(
+        "PARENT" => "LOGO_PARAMS",
+        "NAME" => GetMessage("LOGO_TRUMBNAIL_CONTENTURL"),
+        "TYPE" => "STRING",
+    );
+}
+//END LOGO DETAIL

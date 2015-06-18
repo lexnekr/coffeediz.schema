@@ -1,4 +1,4 @@
-# coffeediz.schema
+﻿# coffeediz.schema
 Набор компонентов 1С-Битрикс для реализации микроразметки по схеме Schema.org
 
 

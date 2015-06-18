@@ -1,14 +1,5 @@
 <?
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
-CModule::IncludeModule("fileman");
-CMedialib::Init();
-
-$ar = CMedialibCollection::GetList(array('arFilter' => array('ACTIVE' => 'Y', 'PARENT_ID' => 0)));
-
-$arCollection = array();
-foreach($ar as $Collection){
-    $arCollection[$Collection['ID']] = $Collection['NAME'];
-}
 
 $arComponentParameters = array(
 	"GROUPS" => array(
@@ -27,6 +18,10 @@ $arComponentParameters = array(
         "GAME_PARAMS" => array(
             "SORT" => 230,
             "NAME" => GetMessage("GAME_PARAMS"),
+        ),
+        "OFFER_PARAMS" => array(
+            "SORT" => 310,
+            "NAME" => GetMessage("OFFER_PARAMS"),
         ),
 		"RATING" => array(
 			"SORT" => 900,
@@ -48,6 +43,17 @@ $arComponentParameters = array(
                 "MobileApplication" => GetMessage("MobileApplication"),
                 "WebApplication" => GetMessage("WebApplication"),
                 "VideoGame" => GetMessage("VideoGame"),
+            ),
+            "DEFAULT" => "SoftwareApplication",
+            "REFRESH" => "Y",
+        ),
+        "ADDITIONAL_TYPE" => array(
+            "PARENT" => "MAIN_PARAMS",
+            "NAME" => GetMessage("ADDITIONAL_TYPE"),
+            "TYPE" => "LIST",
+            "VALUES" => array(
+                "" => "-",
+                "Product" => GetMessage("Product"),
             ),
             "DEFAULT" => "SoftwareApplication",
             "REFRESH" => "Y",
@@ -115,6 +121,7 @@ $arComponentParameters = array(
             "ROWS" => 5,
             "COLS" => "50",
         ),
+
         "PRICE" => array(
             "PARENT" => "MAIN_PARAMS",
             "NAME" => GetMessage("PRICE"),
@@ -130,6 +137,53 @@ $arComponentParameters = array(
                 "EUR" => "EUR",
                 "RUB" => "RUB",
             ),
+        ),
+        "ITEMAVAILABILITY" => array(
+            "PARENT" => "OFFER_PARAMS",
+            "NAME" => GetMessage("ItemAvailability"),
+            "TYPE" => "LIST",
+            "VALUES" => array(
+                "InStock" => GetMessage("InStock"),
+                "LimitedAvailability" => GetMessage("LimitedAvailability"),
+                "OnlineOnly" => GetMessage("OnlineOnly"),
+                "PreOrder" => GetMessage("PreOrder"),
+                "InStoreOnly" => GetMessage("InStoreOnly"),
+                "SoldOut" => GetMessage("SoldOut"),
+                "OutOfStock" => GetMessage("OutOfStock"),
+                "Discontinued" => GetMessage("Discontinued"),
+            ),
+        ),
+        "ITEMCONDITION" => array(
+            "PARENT" => "OFFER_PARAMS",
+            "NAME" => GetMessage("itemCondition"),
+            "TYPE" => "LIST",
+            "VALUES" => array(
+                "NewCondition" => GetMessage("NewCondition"),
+                "UsedCondition" => GetMessage("UsedCondition"),
+                "DamagedCondition" => GetMessage("DamagedCondition"),
+                "RefurbishedCondition" => GetMessage("RefurbishedCondition"),
+            ),
+        ),
+        "PAYMENTMETHOD" => array(
+            "PARENT" => "OFFER_PARAMS",
+            "NAME" => GetMessage("PaymentMethod"),
+            "TYPE" => "LIST",
+            "VALUES" => array(
+                "VISA" => GetMessage("VISA"),
+                "MasterCard" => GetMessage("MasterCard"),
+                "AmericanExpress" => GetMessage("AmericanExpress"),
+                "ByBankTransferInAdvance" => GetMessage("ByBankTransferInAdvance"),
+                "ByInvoice" => GetMessage("ByInvoice"),
+                "Cash" => GetMessage("Cash"),
+                "CheckInAdvance" => GetMessage("CheckInAdvance"),
+                "COD" => GetMessage("COD"),
+                "DirectDebit" => GetMessage("DirectDebit"),
+                "GoogleCheckout" => GetMessage("GoogleCheckout"),
+                "PayPal" => GetMessage("PayPal"),
+                "PaySwarm" => GetMessage("PaySwarm"),
+            ),
+            "ADDITIONAL_VALUES" => "N",
+            "MULTIPLE" => "Y",
         ),
 
 

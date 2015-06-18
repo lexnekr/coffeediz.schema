@@ -1,4 +1,8 @@
 <?
+$MESS ['LOGO_PARAMS'] = "Параметры Логотипа";
+$MESS ['MAIN_PARAMS'] = "Тип Организации/Места";
+$MESS ['PARAMETERS_PARAMS'] = "Основные Параметры";
+
 $MESS ['RATING'] = "Рейтинг";
 $MESS ['PARAM_RATING_SHOW'] = "Выводить рейтинг";
 $MESS ['RATING_SHOW'] = "Не отображать на сайте";
@@ -225,6 +229,14 @@ $MESS ['TYPE_Reservoir'] = "Водохранилище";
 $MESS ['TYPE_RiverBodyOfWater'] = "Река";
 $MESS ['TYPE_SeaBodyOfWater'] = "Море";
 $MESS ['TYPE_Waterfall'] = "Водопад";
+
+$MESS ['LOGO_NAME'] = "Название картинки Логотипа";
+$MESS ['LOGO_CAPTION'] = "Подпись к картинке Логотипа";
+$MESS ['LOGO_DESCRIPTION'] = "Описание картинки Логотипа";
+$MESS ['LOGO_HEIGHT'] = "Высота изображения (px)";
+$MESS ['LOGO_WIDTH'] = "Ширина изображения (px)";
+$MESS ['LOGO_TRUMBNAIL_CONTENTURL'] = "Ссылка на миниатюру";
+
 $MESS [''] = "";
 $MESS [''] = "";
 $MESS [''] = "";

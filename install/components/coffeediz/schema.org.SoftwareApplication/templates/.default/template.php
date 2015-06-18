@@ -10,7 +10,9 @@ $this->setFrameMode(true);?>
     <div itemscope itemtype="http://schema.org/<?if(!empty($arParams['TYPE'])):?><?=$arParams['TYPE']?><?else:?>SoftwareApplication<?endif?>" <? if($arParams['SHOW'] == "Y") { echo 'style="display: none;"'; } ?> >
 
 
-
+    <?if(!empty($arParams['ADDITIONAL_TYPE'])):?>
+        <link itemprop="additionalType" href="https://schema.org/<?=$arParams['ADDITIONAL_TYPE']?>"/>
+    <?endif?>
     <?if(!empty($arParams['NAME'])):?>
     <p itemprop="name"><?=$arParams['NAME']?></p>
     <?endif?>
@@ -34,10 +36,21 @@ $this->setFrameMode(true);?>
         <p itemprop="operatingSystem"><?=$arParams['OPERATINGSYSTEM']?></p>
     <?endif?>
     <?if(!empty($arParams['PRICE'])):?>
-        <p itemprop="offers"  itemscope itemtype="http://schema.org/Offer">
-            <span itemprop="price"><?=$arParams['PRICE']?></span>
-            <meta itemprop="priceCurrency" content="<?=$arParams['PRICECURRENCY']?>" />
-        </p>
+        <?$APPLICATION->IncludeComponent(
+            "coffeediz:schema.org.Offer",
+            ".default",
+            Array(
+                "SHOW" => "",
+                "PRICE" => $arParams['PRICE'],
+                "PRICECURRENCY" => $arParams['PRICECURRENCY'],
+                "ITEMAVAILABILITY" => $arParams['ITEMAVAILABILITY'],
+                "ITEMCONDITION" => $arParams['ITEMCONDITION'],
+                "PAYMENTMETHOD" => $arParams['PAYMENTMETHOD'],
+                "ITEMPROP" => "offers"
+            ),
+            false,
+            array('HIDE_ICONS' => 'Y')
+        );?>
     <?endif?>
 
 
