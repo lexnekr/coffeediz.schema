@@ -9,6 +9,9 @@ $this->setFrameMode(true);?>
 
 	<div itemscope itemtype="http://schema.org/<?if(!empty($arParams['TYPE'])):?><?=$arParams['TYPE']?><?else:?>Article<?endif?>" <?if($arParams['SHOW'] == "Y"):?>style="display: none;" <?endif?>>
 
+        <?if(!empty($arParams['LEARNING_RESOURCE_TYPE'])):?>
+            <meta itemprop="learningResourceType" content="<?=$arParams['LEARNING_RESOURCE_TYPE']?>"/>
+        <?endif?>
         <?if(!empty($arParams['NAME'])):?>
             <p itemprop="name"><?=$arParams['NAME']?></p>
             <meta itemprop="headline" content="<?=$arParams['NAME']?>"/>
@@ -17,9 +20,35 @@ $this->setFrameMode(true);?>
             <p itemprop="articleBody"><?=$arParams['ARTICLEBODY']?></p>
             <meta itemprop="description" content="<?=$arParams['ARTICLEBODY']?>"/>
         <?endif?>
+        <?if(!empty($arParams['ABOUT'])):?>
+            <meta itemprop="about" content="<?=$arParams['ABOUT']?>"/>
+        <?endif?>
         <?if(!empty($arParams['GENRE'])):?>
             <p itemprop="genre"><?=$arParams['GENRE']?></p>
         <?endif?>
+        <?if(!empty($arParams['ARTICLE_SECTION'])) { ?>
+            <?foreach($arParams['ARTICLE_SECTION'] as $key => $articleSection){
+                if(empty($articleSection))
+                    continue;
+                ?>
+                <meta itemprop="articleSection" content="<?=$articleSection?>"/>
+            <? } ?>
+        <? } ?>
+        <?if(!empty($arParams['KEYWORDS'])) { ?>
+            <?foreach($arParams['KEYWORDS'] as $key => $keywords){
+                if(empty($keywords))
+                    continue;
+                ?>
+                <meta itemprop="keywords" content="<?=$keywords?>"/>
+            <? } ?>
+        <? } ?>
+        <?if(!empty($arParams['IN_LANGUAGE'])):?>
+            <meta itemprop="inLanguage" content="<?=$arParams['IN_LANGUAGE']?>"/>
+        <?endif?>
+        <?if(!empty($arParams['DATA_PUBLISHED'])):?>
+            <p itemprop="datePublished"><?=$arParams['DATA_PUBLISHED']?></p>
+        <?endif?>
+
 
         <?if(!empty($arParams['AUTHOR_TEXT']) and $arParams['AUTHOR_TYPE'] == "Text"):?>
             <p itemprop="author"><?=$arParams['AUTHOR_TEXT']?></p>
@@ -69,6 +98,57 @@ $this->setFrameMode(true);?>
             );?>
         <?endif?>
 
+        <?if($arParams["TYPE"] == "ScholarlyArticle" or $arParams["TYPE"] == "MedicalScholarlyArticle"):?>
+            <?if(!empty($arParams['SOURCE_TYPE_URL_URL'])):?>
+                <p>
+                    <a href="<?=$arParams['SOURCE_TYPE_URL_URL']?>" itemprop="source"><?=$arParams['SOURCE_TYPE_URL_TEXT']?></a>
+                </p>
+            <?endif?>
+            <?if(!empty($arParams['SOURCE_TYPE_TEXT_TEXT'])):?>
+                <p itemprop="source"><?=$arParams['SOURCE_TYPE_TEXT_TEXT']?></p>
+            <?endif?>
+            <?if(!empty($arParams['REFERENCES_URLS'])) { ?>
+                <?foreach($arParams['REFERENCES_URLS'] as $key => $referencesUrl){
+                    if(empty($referencesUrl))
+                        continue;
+                    ?>
+                    <p>
+                        <a href="<?=$referencesUrl?>" itemprop="references"><?=$referencesUrl?></a>
+                    </p>
+                <? } ?>
+            <? } ?>
+            <?if(!empty($arParams['REFERENCES_TEXTS'])) { ?>
+                <?foreach($arParams['REFERENCES_TEXTS'] as $key => $referencesText){
+                    if(empty($referencesText))
+                        continue;
+                    ?>
+                    <p itemprop="references"><?=$referencesText?></p>
+                <? } ?>
+            <? } ?>
+        <?endif?>
+
+
+        <?if(!empty($arParams['IMAGEURL'])):?>
+            <?$APPLICATION->IncludeComponent(
+                "coffeediz:schema.org.ImageObject",
+                "",
+                Array(
+                    "CONTENTURL" => $arParams['IMAGEURL'],
+                    "NAME" => $arParams['IMAGE_NAME'],
+                    "CAPTION" => $arParams['IMAGE_CAPTION'],
+                    "DESCRIPTION" => $arParams['IMAGE_DESCRIPTION'],
+                    "HEIGHT" => $arParams['IMAGE_HEIGHT'],
+                    "WIDTH" => $arParams['IMAGE_WIDTH'],
+                    "TRUMBNAIL_CONTENTURL" => $arParams['IMAGE_TRUMBNAIL_CONTENTURL'],
+                    "TRUMBNAIL_TYPE" => "N",
+                    "REPRESENTATIVEOFPAGE" => "",
+                    "PARAM_RATING_SHOW" => "N",
+                    "ITEMPROP" => "image",
+                ),
+                false,
+                array('HIDE_ICONS' => 'Y')
+            );?>
+        <?endif?>
 
 
         <?if(!empty($arParams['RATINGVALUE']) and $arParams['PARAM_RATING_SHOW'] == "Y"):?>
