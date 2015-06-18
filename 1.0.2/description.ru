@@ -1,1 +1,0 @@
-Добавлен компонент schema.org - Изображение (coffeediz:schema.org.ImageObject)
