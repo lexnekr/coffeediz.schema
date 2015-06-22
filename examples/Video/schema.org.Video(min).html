@@ -1,0 +1,60 @@
+﻿<head lang="ru-RU">
+	<meta name="viewport" content="width=device-width" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Микроразметка Schema.org - Видео (минимальный набор данных для Яндекс)</title>
+<head>
+
+<body>
+
+	<h1>Пример микроразметки Schema.org Видео (с минимальным набором данных для Яндекс)</h1>
+
+<table border="1" cellpadding="5" cellspacing="0" class="">
+<tbody>
+<tr>
+	<td style="width: 50%;">
+		 <b>Реальный код</b>
+	</td>
+	<td style="width: 50%;">
+		 <b>Образец реального кода</b>
+	</td>
+</tr>
+<tr>
+	<td>
+		<div itemscope itemtype="http://schema.org/VideoObject">
+			<!-- Start REQUIRED_PARAMS -->
+			<p>
+				<a href="https://youtu.be/ht5hXi0zujQ" itemprop="url">https://youtu.be/ht5hXi0zujQ</a> <!-- Ссылка на видео -->
+			</p>
+			<p itemprop="name">Управляем сайтом: Быстро, просто, эффективно!</p> <!-- Название Видео -->
+			<p itemprop="description">Рекламный ролик для ТВ об 1С-Битрикс</p> <!-- Описание -->
+			<div itemscope="" itemtype="http://schema.org/ImageObject" itemprop="thumbnail"> <!-- НАЧАЛО схемы картинки предпросмотра видео -->
+				<img src="http://i.ytimg.com/vi/ht5hXi0zujQ/mqdefault.jpg" itemprop="contentUrl"> <!-- Картинка предпросмотра видео (адрес) -->
+			</div> <!-- ОКОНЧАНИЕ картинки предпросмотра видео -->
+			<meta itemprop="uploadDate" content="2013-10-22"> <!-- Дата загрузки видео -->
+			<meta itemprop="duration" content="PT00H01M29S"> <!-- Продолжительность видео -->
+			<meta itemprop="isFamilyFriendly" content="true"> <!-- Разрешено для семейного просмотра (ДА) -->
+			<!-- End REQUIRED_PARAMS -->
+		</div>
+	</td>
+	<td><code>
+		&lt;div itemscope itemtype="http://schema.org/VideoObject"&gt;<br>
+		&nbsp; &nbsp;<span style="color: #00a650;">&lt;!-- Start REQUIRED_PARAMS --&gt;</span><br>
+		&nbsp; &nbsp;&lt;p&gt;<br>
+		&nbsp; &nbsp; &nbsp; &lt;a href="https://youtu.be/ht5hXi0zujQ" itemprop="url"&gt;https://youtu.be/ht5hXi0zujQ&lt;/a&gt; <span style="color: #00a650;">&lt;!-- Ссылка на видео --&gt;</span><br>
+		&nbsp; &nbsp;&lt;/p&gt;<br>
+		&nbsp; &nbsp;&lt;p itemprop="name"&gt;Управляем сайтом: Быстро, просто, эффективно!&lt;/p&gt; <span style="color: #00a650;">&lt;!-- Название Видео --&gt;</span><br>
+		&nbsp; &nbsp;&lt;p itemprop="description"&gt;Рекламный ролик для ТВ об 1С-Битрикс&lt;/p&gt; <span style="color: #00a650;">&lt;!-- Описание --&gt;</span><br>
+		&nbsp; &nbsp;&lt;div itemscope="" itemtype="http://schema.org/ImageObject" itemprop="thumbnail"&gt; <span style="color: #00a650;">&lt;!-- <span style="color: #ee1d24;">НАЧАЛО </span>схемы картинки предпросмотра видео --&gt;</span><br>
+		&nbsp; &nbsp; &nbsp; &lt;img src="http://i.ytimg.com/vi/ht5hXi0zujQ/mqdefault.jpg" itemprop="contentUrl"&gt; <span style="color: #00a650;">&lt;!-- Картинка предпросмотра видео (адрес) --&gt;</span><br>
+		&nbsp; &nbsp;&lt;/div&gt; <span style="color: #00a650;">&lt;!-- <span style="color: #ee1d24;">ОКОНЧАНИЕ </span>картинки предпросмотра видео --&gt;</span><br>
+		&nbsp; &nbsp;&lt;meta itemprop="uploadDate" content="2013-10-22"&gt; <span style="color: #00a650;">&lt;!-- Дата загрузки видео --&gt;</span><br>
+		&nbsp; &nbsp;&lt;meta itemprop="duration" content="PT00H01M29S"&gt; <span style="color: #00a650;">&lt;!-- Продолжительность видео --&gt;</span><br>
+		&nbsp; &nbsp;&lt;meta itemprop="isFamilyFriendly" content="true"&gt; <span style="color: #00a650;">&lt;!-- Разрешено для семейного просмотра (ДА) --&gt;</span><br>
+		&nbsp; <span style="color: #00a650;">&nbsp;&lt;!-- End REQUIRED_PARAMS --&gt;</span><br>
+		&lt;/div&gt;
+	</code></td>
+</tr>
+</tbody>
+</table>
+
+<body>
