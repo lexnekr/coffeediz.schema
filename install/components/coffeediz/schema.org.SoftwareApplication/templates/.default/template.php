@@ -60,7 +60,7 @@ $this->setFrameMode(true);?>
 
     <?if(!empty($arParams['RATINGVALUE']) and $arParams['PARAM_RATING_SHOW'] == "Y"):?>
         <?$APPLICATION->IncludeComponent(
-            "coffeediz:schema.org.AggregateRating",
+            "coffeediz:schema.org.Rating",
             ".default",
             Array(
                 "SHOW" => $arParams['RATING_SHOW'],
@@ -69,6 +69,7 @@ $this->setFrameMode(true);?>
                 "REVIEWCOUNT" => $arParams['REVIEWCOUNT'],
                 "BESTRATING" => $arParams['BESTRATING'],
                 "WORSTRATING" => $arParams['WORSTRATING'],
+                "AGGREGATE_RATING" => "Y",
                 "ITEMPROP" => "Y"
             ),
             false,

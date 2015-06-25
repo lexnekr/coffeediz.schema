@@ -31,23 +31,15 @@ $arComponentParameters = array(
 			"NAME" => GetMessage("PARAM_SHOW"),
 			"TYPE" => "CHECKBOX",
 		),
+        "AGGREGATE_RATING" => array(
+            "PARENT" => "ADDITIONAL_SETTINGS",
+            "NAME" => GetMessage("AggregateRating"),
+            "TYPE" => "CHECKBOX",
+            "REFRESH" => "Y",
+        ),
 		"RATINGVALUE" => array(
 			"PARENT" => "ADDITIONAL_SETTINGS",
 			"NAME" => GetMessage("ratingValue"),
-			"TYPE" => "STRING",
-			"SORT" => 500,
-			"DEFAULT" => "",
-		),
-		"RAITINGCOUNT" => array(
-			"PARENT" => "ADDITIONAL_SETTINGS",
-			"NAME" => GetMessage("ratingCount"),
-			"TYPE" => "STRING",
-			"SORT" => 500,
-			"DEFAULT" => "",
-		),
-		"REVIEWCOUNT" => array(
-			"PARENT" => "ADDITIONAL_SETTINGS",
-			"NAME" => GetMessage("reviewCount"),
 			"TYPE" => "STRING",
 			"SORT" => 500,
 			"DEFAULT" => "",
@@ -71,20 +63,41 @@ $arComponentParameters = array(
 			"NAME" => GetMessage("itemprop"),
 			"TYPE" => "CHECKBOX",
 		),
-		"ITEMREVIEWED" => array(
-			"PARENT" => "ADDITIONAL_SETTINGS",
-			"NAME" => GetMessage("ITEMREVIEWED"),
-			"TYPE" => "LIST",
-			"VALUES" => array(
-				"" => "", 
-				"OrganizationAndPlace" => GetMessage("OrganizationAndPlace")
-			),
-			"REFRESH" => "Y",
-		),
 	)
 );
 
 
+
+//START AggregateRating
+
+//END AggregateRating
+if ($arCurrentValues["AGGREGATE_RATING"] == "Y")
+{
+    $arComponentParameters["PARAMETERS"]["RAITINGCOUNT"] = Array(
+        "PARENT" => "ADDITIONAL_SETTINGS",
+        "NAME" => GetMessage("ratingCount"),
+        "TYPE" => "STRING",
+        "SORT" => 500,
+        "DEFAULT" => "",
+    );
+    $arComponentParameters["PARAMETERS"]["REVIEWCOUNT"] = Array(
+        "PARENT" => "ADDITIONAL_SETTINGS",
+        "NAME" => GetMessage("reviewCount"),
+        "TYPE" => "STRING",
+        "SORT" => 500,
+        "DEFAULT" => "",
+    );
+    $arComponentParameters["PARAMETERS"]["ITEMREVIEWED"] = Array(
+        "PARENT" => "ADDITIONAL_SETTINGS",
+        "NAME" => GetMessage("ITEMREVIEWED"),
+        "TYPE" => "LIST",
+        "VALUES" => array(
+            "" => "",
+            "OrganizationAndPlace" => GetMessage("OrganizationAndPlace")
+        ),
+        "REFRESH" => "Y",
+    );
+}
 // START ITEMREVIEWED
 // START OrganizationAndPlace
 
