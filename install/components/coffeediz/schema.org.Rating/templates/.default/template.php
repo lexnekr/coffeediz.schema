@@ -7,34 +7,28 @@ $this->setFrameMode(true);?>
 	<?}?>
 <?else:?>
 
-	<div itemscope itemtype="http://schema.org/AggregateRating" <? if($arParams['ITEMPROP'] == "Y") { echo 'itemprop="aggregateRating"'; } ?> <? if($arParams['SHOW'] == "Y") { echo 'style="display: none;"'; } ?> >
-	<p>
+	<div itemscope itemtype="http://schema.org/<?if($arParams['AGGREGATE_RATING'] == "Y"):?>AggregateRating<?else:?>Rating<?endif?>" <?if($arParams['AGGREGATE_RATING'] == "Y" and $arParams['ITEMPROP'] == "Y"):?>itemprop="aggregateRating"<?elseif($arParams['AGGREGATE_RATING'] == "N" and $arParams['ITEMPROP'] == "Y"):?>itemprop="reviewRating"<?endif?> <? if($arParams['SHOW'] == "Y") { echo 'style="display: none;"'; } ?> >
+
 	<?if(!empty($arParams['RATINGVALUE'])):?>
-		<span itemprop="ratingValue"><?=$arParams['RATINGVALUE']?></span>
+		<div itemprop="ratingValue"><?=$arParams['RATINGVALUE']?></div>
 	<?endif?>
-	<?if(!empty($arParams['WORSTRATING']) or !empty($arParams['BESTRATING'])):?>
-		<?=GetMessage('SCALE_1')?>
-		<?if(!empty($arParams['WORSTRATING'])):?>
-			<span itemprop="worstRating"><?=$arParams['WORSTRATING']?></span>
-		<?endif?>
-		<?=GetMessage('SCALE_2')?>
-		<?if(!empty($arParams['BESTRATING'])):?>
-			<span itemprop="bestRating"><?=$arParams['BESTRATING']?></span>
-		<?endif?>
-		<?=GetMessage('SCALE_3')?>
+	<?if(!empty($arParams['BESTRATING'])):?>
+		<div itemprop="bestRating"><?=$arParams['BESTRATING']?></div>
 	<?endif?>
-	</p>
+	<?if(!empty($arParams['WORSTRATING'])):?>
+		<div itemprop="worstRating"><?=$arParams['WORSTRATING']?></div>
+	<?endif?>
 	<?if(!empty($arParams['RAITINGCOUNT'])):?>
-		<span itemprop="ratingCount"><?=$arParams['RAITINGCOUNT']?></span><?=GetMessage('RAITINGCOUNT')?>
+		<div itemprop="ratingCount"><?=$arParams['RAITINGCOUNT']?></div>
 	<?endif?>
 	<?if(!empty($arParams['REVIEWCOUNT'])):?>
-		<span itemprop="reviewCount"><?=$arParams['REVIEWCOUNT']?></span><?=GetMessage('REVIEWCOUNT')?>
+		<div itemprop="reviewCount"><?=$arParams['REVIEWCOUNT']?></div>
 	<?endif?>
 
 	<?if($arParams['ITEMREVIEWED']=="OrganizationAndPlace"):?>
 		<?$APPLICATION->IncludeComponent(
 			"coffeediz:schema.org.OrganizationAndPlace",
-			"example",
+			"",
 			Array(
 				"TYPE" => $arParams['ITEMREVIEWED_TYPE'],
 				"NAME" => $arParams['ITEMREVIEWED_NAME'],

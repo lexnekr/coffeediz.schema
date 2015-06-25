@@ -1,5 +1,6 @@
 <?
 $MESS ['PARAM_SHOW'] = "Не отображать на сайте";
+$MESS ['AggregateRating'] = "Среднее значение рейтинга";
 $MESS ['ratingValue'] = "Значение рейтинга";
 $MESS ['ratingCount'] = "Количество голосов";
 $MESS ['reviewCount'] = "Количество отзывов";
