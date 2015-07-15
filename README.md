@@ -8,8 +8,14 @@
 * coffeediz:schema.org.Product - Продукт
 * coffeediz:schema.org.Article - Статья
 * coffeediz:breadcrumb (обёртка над bitrix:breadcrumb) - Хлебные крошки
+<<<<<<< HEAD
 * coffeediz:schema.org.Person - Персона (*рекомендуется к использовнаию как свойство для других схем!*)
 * coffeediz:schema.org.AggregateRating - Рейтинг (*рекомендуется к использовнаию как свойство для других схем!*)
+=======
+* coffeediz:schema.org.Person - Персона
+* coffeediz:schema.org.Video - Видео
+* coffeediz:schema.org.Rating - Рейтинг (*рекомендуется к использовнаию как свойство для других схем!*)
+>>>>>>> 2402f20f4cb79a26014fc43de299995d4f4f72f1
 * coffeediz:schema.org.Offer - Предложение (*рекомендуется к использовнаию как свойство для других схем!*)
  
 Документация
@@ -21,7 +27,12 @@
 * [coffeediz:schema.org.Article - Статья](http://xn--80ahcjeib4ac4d.xn--p1ai/information/microdesmidae_module_coffeediz_schema_for_1c_bitrix_part_4_persons_and_articles/#Article)
 * [coffeediz:breadcrumb (обёртка над bitrix:breadcrumb) - Хлебные крошки](http://xn--80ahcjeib4ac4d.xn--p1ai/information/about_microcathode_say_a_word_how_to_implement_microcathode_module_coffeediz_schema_on_the_website_u/#breadcrumb) 
 * [coffeediz:schema.org.Person - Персона](http://xn--80ahcjeib4ac4d.xn--p1ai/information/microdesmidae_module_coffeediz_schema_for_1c_bitrix_part_4_persons_and_articles/#Person)
+<<<<<<< HEAD
 * [coffeediz:schema.org.AggregateRating - Рейтинг](http://xn--80ahcjeib4ac4d.xn--p1ai/information/microdesmidae_module_coffeediz_schema_for_1c_bitrix_part_2_rating_images_program/#AggregateRating)
+=======
+* [coffeediz:schema.org.Video - Видео](http://xn--80ahcjeib4ac4d.xn--p1ai/information/microdesmidae_module_coffeediz_schema_for_1c_bitrix_part_5_video/)
+* [coffeediz:schema.org.Rating - Рейтинг](http://xn--80ahcjeib4ac4d.xn--p1ai/information/microdesmidae_module_coffeediz_schema_for_1c_bitrix_part_2_rating_images_program/#AggregateRating)
+>>>>>>> 2402f20f4cb79a26014fc43de299995d4f4f72f1
 * [coffeediz:schema.org.Offer - Предложение](http://xn--80ahcjeib4ac4d.xn--p1ai/information/microdesmidae_module_coffeediz_schema_for_1c_bitrix_part_3_proposals_and_product/#Offer)
 
 
