@@ -45,72 +45,13 @@ $arComponentParameters = array(
             "COLS" => "50",
         ),
 
-//START OFFER
-        "PRICE" => array(
+        "AGGREGATEOFFER" => array(
             "PARENT" => "OFFER_PARAMS",
-            "NAME" => GetMessage("PRICE"),
-            "TYPE" => "STRING",
-            "DEFAULT" => "",
+            "NAME" => GetMessage("AggregateOffer"),
+            "TYPE" => "CHECKBOX",
+            "REFRESH" => "Y",
+            "DEFAULT" => "N",
         ),
-        "PRICECURRENCY" => array(
-            "PARENT" => "OFFER_PARAMS",
-            "NAME" => GetMessage("PRICECURRENCY"),
-            "TYPE" => "LIST",
-            "VALUES" => array(
-                "USD" => "USD",
-                "EUR" => "EUR",
-                "RUB" => "RUB",
-            ),
-        ),
-        "ITEMAVAILABILITY" => array(
-            "PARENT" => "OFFER_PARAMS",
-            "NAME" => GetMessage("ItemAvailability"),
-            "TYPE" => "LIST",
-            "VALUES" => array(
-                "InStock" => GetMessage("InStock"),
-                "LimitedAvailability" => GetMessage("LimitedAvailability"),
-                "OnlineOnly" => GetMessage("OnlineOnly"),
-                "PreOrder" => GetMessage("PreOrder"),
-                "InStoreOnly" => GetMessage("InStoreOnly"),
-                "SoldOut" => GetMessage("SoldOut"),
-                "OutOfStock" => GetMessage("OutOfStock"),
-                "Discontinued" => GetMessage("Discontinued"),
-            ),
-        ),
-        "ITEMCONDITION" => array(
-            "PARENT" => "OFFER_PARAMS",
-            "NAME" => GetMessage("itemCondition"),
-            "TYPE" => "LIST",
-            "VALUES" => array(
-                "NewCondition" => GetMessage("NewCondition"),
-                "UsedCondition" => GetMessage("UsedCondition"),
-                "DamagedCondition" => GetMessage("DamagedCondition"),
-                "RefurbishedCondition" => GetMessage("RefurbishedCondition"),
-            ),
-        ),
-        "PAYMENTMETHOD" => array(
-            "PARENT" => "OFFER_PARAMS",
-            "NAME" => GetMessage("PaymentMethod"),
-            "TYPE" => "LIST",
-            "VALUES" => array(
-                "VISA" => GetMessage("VISA"),
-                "MasterCard" => GetMessage("MasterCard"),
-                "AmericanExpress" => GetMessage("AmericanExpress"),
-                "ByBankTransferInAdvance" => GetMessage("ByBankTransferInAdvance"),
-                "ByInvoice" => GetMessage("ByInvoice"),
-                "Cash" => GetMessage("Cash"),
-                "CheckInAdvance" => GetMessage("CheckInAdvance"),
-                "COD" => GetMessage("COD"),
-                "DirectDebit" => GetMessage("DirectDebit"),
-                "GoogleCheckout" => GetMessage("GoogleCheckout"),
-                "PayPal" => GetMessage("PayPal"),
-                "PaySwarm" => GetMessage("PaySwarm"),
-            ),
-            "ADDITIONAL_VALUES" => "N",
-            "MULTIPLE" => "Y",
-        ),
-//END OFFER
-
 
         "PARAM_RATING_SHOW" => array(
             "PARENT" => "ADDITIONAL_SETTINGS",
@@ -121,6 +62,119 @@ $arComponentParameters = array(
 	)
 );
 
+
+//START OFFER
+if($arCurrentValues["AGGREGATEOFFER"] == "Y") {
+// START AGGREGATE OFFER
+    $arComponentParameters["PARAMETERS"]["AGGREGATEOFFER_PRICE"] = Array(
+        "PARENT" => "OFFER_PARAMS",
+        "NAME" => GetMessage("AGGREGATEOFFER_PRICE"),
+        "TYPE" => "STRING",
+        "MULTIPLE" => "Y",
+    );
+    $arComponentParameters["PARAMETERS"]["AGGREGATEOFFER_PRICECURRENCY"] = Array(
+        "PARENT" => "OFFER_PARAMS",
+        "NAME" => GetMessage("AGGREGATEOFFER_PRICECURRENCY"),
+        "TYPE" => "STRING",
+        "MULTIPLE" => "Y",
+    );
+    $arComponentParameters["PARAMETERS"]["LOWPRICE"] = Array(
+        "PARENT" => "OFFER_PARAMS",
+        "NAME" => GetMessage("lowPrice"),
+        "TYPE" => "STRING",
+    );
+    $arComponentParameters["PARAMETERS"]["HIGHPRICE"] = Array(
+        "PARENT" => "OFFER_PARAMS",
+        "NAME" => GetMessage("highPrice"),
+        "TYPE" => "STRING",
+    );
+    $arComponentParameters["PARAMETERS"]["PRICECURRENCY"] = Array(
+        "PARENT" => "OFFER_PARAMS",
+        "NAME" => GetMessage("AGGREGATEOFFER_PRICECURRENCY_SUMM"),
+        "TYPE" => "LIST",
+        "VALUES" => array(
+            "USD" => "USD",
+            "EUR" => "EUR",
+            "RUB" => "RUB",
+            "UAH" => "UAH",
+        ),
+    );
+    $arComponentParameters["PARAMETERS"]["OFFERCOUNT"] = Array(
+        "PARENT" => "OFFER_PARAMS",
+        "NAME" => GetMessage("offerCount"),
+        "TYPE" => "STRING",
+    );
+    // END AGGREGATE OFFER
+}
+else {
+    // START STANDALONE OFFER
+    $arComponentParameters["PARAMETERS"]["PRICE"] = Array(
+        "PARENT" => "OFFER_PARAMS",
+        "NAME" => GetMessage("PRICE"),
+        "TYPE" => "STRING",
+    );
+    $arComponentParameters["PARAMETERS"]["PRICECURRENCY"] = Array(
+        "PARENT" => "OFFER_PARAMS",
+        "NAME" => GetMessage("PRICECURRENCY"),
+        "TYPE" => "LIST",
+        "VALUES" => array(
+            "USD" => "USD",
+            "EUR" => "EUR",
+            "RUB" => "RUB",
+            "UAH" => "UAH",
+        ),
+    );
+    // END STANDALONE OFFER
+}
+
+$arComponentParameters["PARAMETERS"]["ITEMAVAILABILITY"] = Array(
+    "PARENT" => "OFFER_PARAMS",
+    "NAME" => GetMessage("ItemAvailability"),
+    "TYPE" => "LIST",
+    "VALUES" => array(
+        "InStock" => GetMessage("InStock"),
+        "LimitedAvailability" => GetMessage("LimitedAvailability"),
+        "OnlineOnly" => GetMessage("OnlineOnly"),
+        "PreOrder" => GetMessage("PreOrder"),
+        "InStoreOnly" => GetMessage("InStoreOnly"),
+        "SoldOut" => GetMessage("SoldOut"),
+        "OutOfStock" => GetMessage("OutOfStock"),
+        "Discontinued" => GetMessage("Discontinued"),
+    ),
+);
+$arComponentParameters["PARAMETERS"]["ITEMCONDITION"] = Array(
+    "PARENT" => "OFFER_PARAMS",
+    "NAME" => GetMessage("itemCondition"),
+    "TYPE" => "LIST",
+    "VALUES" => array(
+        "NewCondition" => GetMessage("NewCondition"),
+        "UsedCondition" => GetMessage("UsedCondition"),
+        "DamagedCondition" => GetMessage("DamagedCondition"),
+        "RefurbishedCondition" => GetMessage("RefurbishedCondition"),
+    ),
+);
+$arComponentParameters["PARAMETERS"]["PAYMENTMETHOD"] = Array(
+    "PARENT" => "OFFER_PARAMS",
+    "NAME" => GetMessage("PaymentMethod"),
+    "TYPE" => "LIST",
+    "VALUES" => array(
+        "VISA" => GetMessage("VISA"),
+        "MasterCard" => GetMessage("MasterCard"),
+        "AmericanExpress" => GetMessage("AmericanExpress"),
+        "ByBankTransferInAdvance" => GetMessage("ByBankTransferInAdvance"),
+        "ByInvoice" => GetMessage("ByInvoice"),
+        "Cash" => GetMessage("Cash"),
+        "CheckInAdvance" => GetMessage("CheckInAdvance"),
+        "COD" => GetMessage("COD"),
+        "DirectDebit" => GetMessage("DirectDebit"),
+        "GoogleCheckout" => GetMessage("GoogleCheckout"),
+        "PayPal" => GetMessage("PayPal"),
+        "PaySwarm" => GetMessage("PaySwarm"),
+    ),
+    "ADDITIONAL_VALUES" => "N",
+    "MULTIPLE" => "Y",
+);
+//END OFFER
 
 
 //START RATING

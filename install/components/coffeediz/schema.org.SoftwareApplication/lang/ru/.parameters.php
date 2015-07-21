@@ -3,7 +3,7 @@ $MESS ['MAIN_PARAMS'] = "Основные параметры";
 $MESS ['MOBILE_PARAMS'] = "Параметры для Мобильных приложений";
 $MESS ['WEB_PARAMS'] = "Параметры для Веб приложений";
 $MESS ['GAME_PARAMS'] = "Параметры для Игр";
-$MESS ['OFFER_PARAMS'] = "Доп. параметры Предложения";
+$MESS ['OFFER_PARAMS'] = "Цены и Параметры Предложения";
 
 $MESS ['PARAM_SHOW'] = "НЕ отображать на сайте";
 $MESS ['TYPE'] = "Тип ПО";
@@ -68,6 +68,14 @@ $MESS ['PaySwarm'] = "PaySwarm";
 $MESS ['VISA'] = "VISA";
 $MESS ['MasterCard'] = "MasterCard";
 $MESS ['AmericanExpress'] = "AmericanExpress";
+
+$MESS ['AggregateOffer'] = "Набор из нескольких предложений";
+$MESS ['AGGREGATEOFFER_PRICE'] = "Цены Предложений из Набора";
+$MESS ['AGGREGATEOFFER_PRICECURRENCY'] = "Валюта (в порядке следования цен Предложений)";
+$MESS ['lowPrice'] = "Минимальная цена в наборе";
+$MESS ['highPrice'] = "Максимальная цена в наборе";
+$MESS ['offerCount'] = "Количество предложений в наборе";
+$MESS ['AGGREGATEOFFER_PRICECURRENCY_SUMM'] = "Валюта (для всего Набора)";
 
 $MESS [''] = "";
 $MESS [''] = "";
