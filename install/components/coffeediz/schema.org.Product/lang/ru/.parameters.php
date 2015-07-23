@@ -49,6 +49,14 @@ $MESS ['ratingCount'] = "Количество голосов";
 $MESS ['reviewCount'] = "Количество отзывов";
 $MESS ['bestRating'] = "Максимальное значение рейтинга";
 $MESS ['worstRating'] = "Минимальное значение рейтинга";
+
+$MESS ['AggregateOffer'] = "Набор из нескольких предложений";
+$MESS ['AGGREGATEOFFER_PRICE'] = "Цены Предложений из Набора";
+$MESS ['AGGREGATEOFFER_PRICECURRENCY'] = "Валюта (в порядке следования цен Предложений)";
+$MESS ['lowPrice'] = "Минимальная цена в наборе";
+$MESS ['highPrice'] = "Максимальная цена в наборе";
+$MESS ['offerCount'] = "Количество предложений в наборе";
+$MESS ['AGGREGATEOFFER_PRICECURRENCY_SUMM'] = "Валюта (для всего Набора)";
 $MESS [''] = "";
 $MESS [''] = "";
 $MESS [''] = "";

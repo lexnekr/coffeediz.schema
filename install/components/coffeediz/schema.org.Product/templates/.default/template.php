@@ -20,12 +20,18 @@ $this->setFrameMode(true);?>
             "coffeediz:schema.org.Offer",
             ".default",
             array(
+                "AGGREGATEOFFER" => $arParams['AGGREGATEOFFER'],
                 "PRICE" => $arParams['PRICE'],
                 "PRICECURRENCY" => $arParams['PRICECURRENCY'],
                 "ITEMAVAILABILITY" => $arParams['ITEMAVAILABILITY'],
                 "ITEMCONDITION" => $arParams['ITEMCONDITION'],
                 "PAYMENTMETHOD" => $arParams['PAYMENTMETHOD'],
-                "ITEMPROP" => "offers"
+                "ITEMPROP" => "offers",
+                "AGGREGATEOFFER_PRICE" => $arParams['AGGREGATEOFFER_PRICE'],
+                "AGGREGATEOFFER_PRICECURRENCY" => $arParams['AGGREGATEOFFER_PRICECURRENCY'],
+                "LOWPRICE" => $arParams['LOWPRICE'],
+                "HIGHPRICE" => $arParams['HIGHPRICE'],
+                "OFFERCOUNT" => $arParams['OFFERCOUNT']
             ),
             false,
             array('HIDE_ICONS' => 'Y')
