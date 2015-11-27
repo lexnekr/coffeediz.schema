@@ -10,7 +10,7 @@ $this->setFrameMode(true);?>
 <div itemscope itemtype="http://schema.org/ImageObject" <?if(!empty($arParams['ITEMPROP'])):?>itemprop="<?=$arParams['ITEMPROP']?>" <?endif?><?if($arParams['SHOW'] == "Y"):?>style="display: none;" <?endif?>>
 
 	<?if(!empty($arParams['CONTENTURL'])):?>
-		<img src="<?=$arParams['CONTENTURL']?>" itemprop="contentUrl" />
+		<img src="<?=$arParams['CONTENTURL']?>" itemprop="contentUrl" alt="<?if(!empty($arParams['NAME'])):?><?=$arParams['NAME']?><?endif?>" />
 	<?endif?>
 
 	<div <?if($arParams['SHOW'] == 'IMG'):?> style="display: none;"<?endif?>>
@@ -34,7 +34,7 @@ $this->setFrameMode(true);?>
 
 		<?if(!empty($arParams['TRUMBNAIL_CONTENTURL'])):?>
 			<div itemscope itemtype="http://schema.org/ImageObject" itemprop="thumbnail">
-				<img src="<?=$arParams['TRUMBNAIL_CONTENTURL']?>" itemprop="contentUrl" />
+				<img src="<?=$arParams['TRUMBNAIL_CONTENTURL']?>" itemprop="contentUrl" alt="<?if(!empty($arParams['NAME'])):?><?=$arParams['NAME']?><?endif?>" />
 			</div>
 		<?endif?>
 
