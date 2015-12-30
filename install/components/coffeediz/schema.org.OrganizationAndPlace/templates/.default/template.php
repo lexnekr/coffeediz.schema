@@ -84,6 +84,7 @@ $this->setFrameMode(true);?>
                 "",
                 Array(
                     "CONTENTURL" => $arParams['LOGO'],
+                    "URL" => $arParams['LOGO_URL'],
                     "NAME" => $arParams['LOGO_NAME'],
                     "CAPTION" => $arParams['LOGO_CAPTION'],
                     "DESCRIPTION" => $arParams['LOGO_DESCRIPTION'],
