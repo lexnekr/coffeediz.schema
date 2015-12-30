@@ -48,6 +48,12 @@ $this->setFrameMode(true);?>
         <?if(!empty($arParams['DATA_PUBLISHED'])):?>
             <p itemprop="datePublished"><?=$arParams['DATA_PUBLISHED']?></p>
         <?endif?>
+        <?if(!empty($arParams['DATA_MODIFIED'])):?>
+            <p itemprop="dateModified"><?=$arParams['DATA_MODIFIED']?></p>
+        <?endif?>
+        <?if(!empty($arParams['MAINENTITYOFPAGE'])):?>
+            <link itemprop="mainEntityOfPage" rel=canonical href=“<?=$arParams['MAINENTITYOFPAGE']?>”/>
+        <?endif?>
 
 
         <?if(!empty($arParams['AUTHOR_TEXT']) and $arParams['AUTHOR_TYPE'] == "Text"):?>
@@ -90,8 +96,43 @@ $this->setFrameMode(true);?>
                     "PHONE" => $arParams['AUTHOR_ORGANIZATION_PHONE'],
                     "FAX" => $arParams[''],
                     "SITE" => $arParams['AUTHOR_ORGANIZATION_SITE'],
-                    "LOGO" => $arParams[''],
+                    "LOGO" => $arParams['AUTHOR_ORGANIZATION_LOGO'],
+                    "LOGO_URL" => $arParams['AUTHOR_ORGANIZATION_LOGO'],
                     "ITEMPROP" => "author",
+                ),
+                false,
+                array('HIDE_ICONS' => 'Y')
+            );?>
+        <?endif?>
+
+        <?if(!empty($arParams['PUBLISHER_ORGANIZATION_NAME'])):?>
+            <?$APPLICATION->IncludeComponent(
+                "coffeediz:schema.org.OrganizationAndPlace",
+                "",
+                Array(
+                    "TYPE" => "Organization",
+                    "TYPE_2" => $arParams['PUBLISHER_ORGANIZATION_TYPE_2'],
+                    "TYPE_3" => $arParams['PUBLISHER_ORGANIZATION_TYPE_3'],
+                    "TYPE_4" => $arParams['PUBLISHER_ORGANIZATION_TYPE_4'],
+                    "NAME" => $arParams['PUBLISHER_ORGANIZATION_NAME'],
+                    "DESCRIPTION" => $arParams['PUBLISHER_ORGANIZATION_DESCRIPTION'],
+                    "POST_CODE" => $arParams['PUBLISHER_ORGANIZATION_POST_CODE'],
+                    "COUNTRY" => $arParams['PUBLISHER_ORGANIZATION_COUNTRY'],
+                    "REGION" => $arParams['PUBLISHER_ORGANIZATION_REGION'],
+                    "LOCALITY" => $arParams['PUBLISHER_ORGANIZATION_LOCALITY'],
+                    "ADDRESS" => $arParams['PUBLISHER_ORGANIZATION_ADDRESS'],
+                    "PHONE" => $arParams['PUBLISHER_ORGANIZATION_PHONE'],
+                    "FAX" => $arParams[''],
+                    "SITE" => $arParams['PUBLISHER_ORGANIZATION_SITE'],
+                    "LOGO" => $arParams['PUBLISHER_ORGANIZATION_LOGO'],
+                    "LOGO_URL" => $arParams['PUBLISHER_ORGANIZATION_LOGO'],
+                    "LOGO_NAME" => $arParams['PUBLISHER_ORGANIZATION_LOGO_NAME'],
+                    "LOGO_CAPTION" => $arParams['PUBLISHER_ORGANIZATION_LOGO_CAPTION'],
+                    "LOGO_DESCRIPTION" => $arParams['PUBLISHER_ORGANIZATION_LOGO_DESCRIPTION'],
+                    "LOGO_HEIGHT" => $arParams['PUBLISHER_ORGANIZATION_LOGO_HEIGHT'],
+                    "LOGO_WIDTH" => $arParams['PUBLISHER_ORGANIZATION_LOGO_WIDTH'],
+                    "LOGO_TRUMBNAIL_CONTENTURL" => $arParams['PUBLISHER_ORGANIZATION_LOGO_TRUMBNAIL_CONTENTURL'],
+                    "ITEMPROP" => "publisher",
                 ),
                 false,
                 array('HIDE_ICONS' => 'Y')
@@ -134,6 +175,7 @@ $this->setFrameMode(true);?>
                 "",
                 Array(
                     "CONTENTURL" => $arParams['IMAGEURL'],
+                    "URL" => $arParams['IMAGEURL'],
                     "NAME" => $arParams['IMAGE_NAME'],
                     "CAPTION" => $arParams['IMAGE_CAPTION'],
                     "DESCRIPTION" => $arParams['IMAGE_DESCRIPTION'],

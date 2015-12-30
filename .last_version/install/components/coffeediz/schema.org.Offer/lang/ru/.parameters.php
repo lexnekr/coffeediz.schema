@@ -36,13 +36,13 @@ $MESS ['MasterCard'] = "MasterCard";
 $MESS ['AmericanExpress'] = "AmericanExpress";
 
 $MESS ['itemprop'] = "Является свойством другого объекта Schema.org";
-$MESS [''] = "";
-$MESS [''] = "";
-$MESS [''] = "";
-$MESS [''] = "";
-$MESS [''] = "";
-$MESS [''] = "";
-$MESS [''] = "";
+$MESS ['AggregateOffer'] = "Набор из нескольких предложений";
+$MESS ['AGGREGATEOFFER_PRICE'] = "Цены Предложений из Набора";
+$MESS ['AGGREGATEOFFER_PRICECURRENCY'] = "Валюта (в порядке следования цен Предложений)";
+$MESS ['lowPrice'] = "Минимальная цена в наборе";
+$MESS ['highPrice'] = "Максимальная цена в наборе";
+$MESS ['offerCount'] = "Количество предложений в наборе";
+$MESS ['AGGREGATEOFFER_PRICECURRENCY_SUMM'] = "Валюта (для всего Набора)";
 $MESS [''] = "";
 $MESS [''] = "";
  ?>

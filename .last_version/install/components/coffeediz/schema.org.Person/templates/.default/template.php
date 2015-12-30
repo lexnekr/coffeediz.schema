@@ -78,7 +78,7 @@ $this->setFrameMode(true);?>
                     continue;
                 ?>
                 <?if($key != 0) { echo ', '; }?>
-                <a href="http://<?=$sameAs?>" itemprop="sameAs"><?=$sameAs?></a>
+                <a href="<?=$sameAs?>" itemprop="sameAs"><?=$sameAs?></a>
             <? } ?>
         </div>
     <? } ?>
@@ -90,7 +90,7 @@ $this->setFrameMode(true);?>
                     continue;
                 ?>
                 <?if($key != 0) { echo ', '; }?>
-                <a href="http://<?=$url?>" itemprop="url"><?=$url?></a>
+                <a href="<?=$url?>" itemprop="url"><?=$url?></a>
             <? } ?>
         </div>
     <? } ?>

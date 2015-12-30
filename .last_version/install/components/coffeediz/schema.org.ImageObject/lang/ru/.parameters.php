@@ -37,8 +37,8 @@ $MESS ['worstRating'] = "Минимальное значение рейтинга";
 $MESS ['itemprop'] = "Является свойством другого объекта Schema.org";
 $MESS ['ITEMPROP_itemReviewed'] = "Рейтинга/Отзывов";
 
-$MESS [''] = "";
-$MESS [''] = "";
-$MESS [''] = "";
+$MESS ['PARAM_EXTRA_SHOW'] = "Показывать особые параметры";
+$MESS ['PARAM_EXTRA'] = "Особые параметры";
+$MESS ['URL'] = "URL изображения (аналог ссылки на изображение)";
 $MESS [''] = "";
  ?>

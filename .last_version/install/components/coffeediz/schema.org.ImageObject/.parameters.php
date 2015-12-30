@@ -24,6 +24,11 @@ $arComponentParameters = array(
 			"SORT" => 900,
 			"NAME" => GetMessage("RATING"),
 		),
+        "PARAM_EXTRA" => array(
+            "SORT" => 1500,
+            "NAME" => GetMessage("PARAM_EXTRA"),
+        ),
+
 	),
 	"PARAMETERS"  =>  array(
 		"SHOW" => array(
@@ -123,6 +128,12 @@ $arComponentParameters = array(
 			"TYPE" => "CHECKBOX",
 			"REFRESH" => "Y",
 		),
+        "PARAM_EXTRA_SHOW" => array(
+            "PARENT" => "ADDITIONAL_SETTINGS",
+            "NAME" => GetMessage("PARAM_EXTRA_SHOW"),
+            "TYPE" => "CHECKBOX",
+            "REFRESH" => "Y",
+        ),
 
 
 	)
@@ -175,3 +186,14 @@ if ($arCurrentValues["PARAM_RATING_SHOW"] == "Y")
 	);
 }
 //END RATING
+
+if ($arCurrentValues["PARAM_EXTRA_SHOW"] == "Y")
+{
+    $arComponentParameters["PARAMETERS"]["URL"] = Array(
+        "PARENT" => "PARAM_EXTRA",
+        "NAME" => GetMessage("URL"),
+        "TYPE" => "STRING",
+        "SORT" => 500,
+        "DEFAULT" => $arCurrentValues["CONTENTURL"],
+    );
+}
