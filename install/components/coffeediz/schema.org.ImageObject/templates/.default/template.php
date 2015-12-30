@@ -15,6 +15,9 @@ $this->setFrameMode(true);?>
 
 	<div <?if($arParams['SHOW'] == 'IMG'):?> style="display: none;"<?endif?>>
 
+        <?if(!empty($arParams['URL'])):?>
+            <meta itemprop="url" content="<?=$arParams['URL']?>">
+        <?endif?>
 		<?if(!empty($arParams['NAME'])):?>
 		<p itemprop="name"><?=$arParams['NAME']?></p>
 		<?endif?>

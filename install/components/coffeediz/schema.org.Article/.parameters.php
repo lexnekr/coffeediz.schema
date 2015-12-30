@@ -19,6 +19,18 @@ $arComponentParameters = array(
             "SORT" => 120,
             "NAME" => GetMessage("AUTHOR_TEXT_PARAMS"),
         ),
+        "AUTHOR_LOGO_PARAMS" => array(
+            "SORT" => 121,
+            "NAME" => GetMessage("PUBLISHER_LOGO_PARAMS"),
+        ),
+        "PUBLISHER_ORGANIZATION_PARAMS" => array(
+            "SORT" => 130,
+            "NAME" => GetMessage("PUBLISHER_ORGANIZATION_PARAMS"),
+        ),
+        "PUBLISHER_ORGANIZATION_LOGO_PARAMS" => array(
+            "SORT" => 131,
+            "NAME" => GetMessage("PUBLISHER_ORGANIZATION_LOGO_PARAMS"),
+        ),
         "IMAGE_PARAMS" => array(
             "SORT" => 140,
             "NAME" => GetMessage("IMAGE_PARAMS"),
@@ -127,6 +139,12 @@ $arComponentParameters = array(
             "TYPE" => "STRING",
             "DEFAULT" => "",
         ),
+        "DATA_MODIFIED" => array(
+            "PARENT" => "MAIN_PARAMS",
+            "NAME" => GetMessage("DATA_MODIFIED"),
+            "TYPE" => "STRING",
+            "DEFAULT" => "",
+        ),
         "AUTHOR_TYPE" => array(
             "PARENT" => "MAIN_PARAMS",
             "NAME" => GetMessage("AUTHOR"),
@@ -146,6 +164,14 @@ $arComponentParameters = array(
             "SORT" => 500,
             "DEFAULT" => "",
             "REFRESH" => "Y",
+        ),
+        "MAINENTITYOFPAGE" => array(
+            "PARENT" => "MAIN_PARAMS",
+            "NAME" => GetMessage("MAINENTITYOFPAGE"),
+            "TYPE" => "STRING",
+            "SORT" => 500,
+            "DEFAULT" => "",
+            "REFRESH" => "N",
         ),
 
 
@@ -342,6 +368,12 @@ if ($arCurrentValues["AUTHOR_TYPE"] == "Organization")
         "PARENT" => "AUTHOR_ORGANIZATION_PARAMS",
         "NAME" => GetMessage("AUTHOR_ORGANIZATION_ADDRESS"),
         "TYPE" => "STRING",
+    );
+    $arComponentParameters["PARAMETERS"]["AUTHOR_ORGANIZATION_LOGO"] = Array(
+        "PARENT" => "AUTHOR_ORGANIZATION_PARAMS",
+        "NAME" => GetMessage("ORGANIZATION_LOGO"),
+        "TYPE" => "STRING",
+        "REFRESH" => "Y",
     );
 }
 
@@ -806,3 +838,129 @@ if (!empty($arCurrentValues['IMAGEURL']))
     );
 }
 //END IMAGE DETAIL
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//START PUBLISHER_TYPE_Organization
+//if ($arCurrentValues["AUTHOR_TYPE"] == "Organization")
+//{
+    $arComponentParameters["PARAMETERS"]["PUBLISHER_ORGANIZATION_TYPE_2"] = Array(
+        "PARENT" => "PUBLISHER_ORGANIZATION_PARAMS",
+        "NAME" => GetMessage("AUTHOR_ORGANIZATION_TYPE"),
+        "TYPE" => "LIST",
+        "REFRESH" => "Y",
+        "SORT" => 50,
+        "VALUES" => array(
+            "" => GetMessage("TYPE_EMPTY"),
+            "EducationalOrganization" => GetMessage("TYPE_EDUCATION"),
+            "LocalBusiness" => GetMessage("TYPE_BUSINESS"),
+            "PerformingGroup" => GetMessage("TYPE_PERFORMINGGROUP"),
+            "Airline" => GetMessage("TYPE_AIRLINE"),
+            "Corporation" => GetMessage("TYPE_CORPORATION"),
+            "GovernmentOrganization" => GetMessage("TYPE_GOV"),
+            "NGO" => GetMessage("TYPE_NGO"),
+            "SportsOrganization" => GetMessage("TYPE_SPORT"),
+        ),
+    );
+    $arComponentParameters["PARAMETERS"]["PUBLISHER_ORGANIZATION_NAME"] = Array(
+        "PARENT" => "PUBLISHER_ORGANIZATION_PARAMS",
+        "NAME" => GetMessage("AUTHOR_ORGANIZATION_NAME"),
+        "TYPE" => "STRING",
+    );
+    $arComponentParameters["PARAMETERS"]["PUBLISHER_ORGANIZATION_DESCRIPTION"] = Array(
+        "PARENT" => "PUBLISHER_ORGANIZATION_PARAMS",
+        "NAME" => GetMessage("AUTHOR_ORGANIZATION_DESCRIPTION"),
+        "TYPE" => "STRING",
+        "ROWS" => 5,
+        "COLS" => "50",
+    );
+    $arComponentParameters["PARAMETERS"]["PUBLISHER_ORGANIZATION_SITE"] = Array(
+        "PARENT" => "PUBLISHER_ORGANIZATION_PARAMS",
+        "NAME" => GetMessage("AUTHOR_ORGANIZATION_SITE"),
+        "TYPE" => "STRING",
+    );
+    $arComponentParameters["PARAMETERS"]["PUBLISHER_ORGANIZATION_PHONE"] = Array(
+        "PARENT" => "PUBLISHER_ORGANIZATION_PARAMS",
+        "NAME" => GetMessage("AUTHOR_ORGANIZATION_PHONE"),
+        "TYPE" => "STRING",
+        "MULTIPLE" =>"Y",
+    );
+    $arComponentParameters["PARAMETERS"]["PUBLISHER_ORGANIZATION_POST_CODE"] = Array(
+        "PARENT" => "PUBLISHER_ORGANIZATION_PARAMS",
+        "NAME" => GetMessage("AUTHOR_ORGANIZATION_POST_CODE"),
+        "TYPE" => "STRING",
+    );
+    $arComponentParameters["PARAMETERS"]["PUBLISHER_ORGANIZATION_COUNTRY"] = Array(
+        "PARENT" => "PUBLISHER_ORGANIZATION_PARAMS",
+        "NAME" => GetMessage("AUTHOR_ORGANIZATION_COUNTRY"),
+        "TYPE" => "STRING",
+    );
+    $arComponentParameters["PARAMETERS"]["PUBLISHER_ORGANIZATION_REGION"] = Array(
+        "PARENT" => "PUBLISHER_ORGANIZATION_PARAMS",
+        "NAME" => GetMessage("AUTHOR_ORGANIZATION_REGION"),
+        "TYPE" => "STRING",
+    );
+    $arComponentParameters["PARAMETERS"]["PUBLISHER_ORGANIZATION_LOCALITY"] = Array(
+        "PARENT" => "PUBLISHER_ORGANIZATION_PARAMS",
+        "NAME" => GetMessage("AUTHOR_ORGANIZATION_LOCALITY"),
+        "TYPE" => "STRING",
+    );
+    $arComponentParameters["PARAMETERS"]["PUBLISHER_ORGANIZATION_ADDRESS"] = Array(
+        "PARENT" => "PUBLISHER_ORGANIZATION_PARAMS",
+        "NAME" => GetMessage("AUTHOR_ORGANIZATION_ADDRESS"),
+        "TYPE" => "STRING",
+    );
+    $arComponentParameters["PARAMETERS"]["PUBLISHER_ORGANIZATION_LOGO"] = Array(
+        "PARENT" => "PUBLISHER_ORGANIZATION_PARAMS",
+        "NAME" => GetMessage("ORGANIZATION_LOGO"),
+        "TYPE" => "STRING",
+        "REFRESH" => "Y",
+    );
+//}
+if (!empty($arCurrentValues['PUBLISHER_ORGANIZATION_LOGO']))
+{
+    $arComponentParameters["PARAMETERS"]["PUBLISHER_ORGANIZATION_LOGO_NAME"] = Array(
+        "PARENT" => "PUBLISHER_ORGANIZATION_LOGO_PARAMS",
+        "NAME" => GetMessage("LOGO_NAME"),
+        "TYPE" => "STRING",
+    );
+    $arComponentParameters["PARAMETERS"]["PUBLISHER_ORGANIZATION_LOGO_CAPTION"] = Array(
+        "PARENT" => "PUBLISHER_ORGANIZATION_LOGO_PARAMS",
+        "NAME" => GetMessage("LOGO_CAPTION"),
+        "TYPE" => "STRING",
+    );
+    $arComponentParameters["PARAMETERS"]["PUBLISHER_ORGANIZATION_LOGO_DESCRIPTION"] = Array(
+        "PARENT" => "PUBLISHER_ORGANIZATION_LOGO_PARAMS",
+        "NAME" => GetMessage("LOGO_DESCRIPTION"),
+        "TYPE" => "STRING",
+        "ROWS" => 5,
+        "COLS" => "50",
+    );
+    $arComponentParameters["PARAMETERS"]["PUBLISHER_ORGANIZATION_LOGO_HEIGHT"] = Array(
+        "PARENT" => "PUBLISHER_ORGANIZATION_LOGO_PARAMS",
+        "NAME" => GetMessage("LOGO_HEIGHT"),
+        "TYPE" => "STRING",
+    );
+    $arComponentParameters["PARAMETERS"]["PUBLISHER_ORGANIZATION_LOGO_WIDTH"] = Array(
+        "PARENT" => "PUBLISHER_ORGANIZATION_LOGO_PARAMS",
+        "NAME" => GetMessage("LOGO_WIDTH"),
+        "TYPE" => "STRING",
+    );
+    $arComponentParameters["PARAMETERS"]["PUBLISHER_ORGANIZATION_LOGO_TRUMBNAIL_CONTENTURL"] = Array(
+        "PARENT" => "PUBLISHER_ORGANIZATION_LOGO_PARAMS",
+        "NAME" => GetMessage("LOGO_TRUMBNAIL_CONTENTURL"),
+        "TYPE" => "STRING",
+    );
+}
