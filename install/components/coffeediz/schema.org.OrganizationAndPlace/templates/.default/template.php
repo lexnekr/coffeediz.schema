@@ -102,6 +102,36 @@ $this->setFrameMode(true);?>
 		</div>
 	<? } ?>
 
+    <?if(!empty($arParams['PHOTO_SRC'])) { ?>
+        <div>
+            <? $i=0;
+            foreach($arParams['PHOTO_SRC'] as $key) {
+                ?>
+                <?$APPLICATION->IncludeComponent(
+                    "coffeediz:schema.org.ImageObject",
+                    "",
+                    Array(
+                        "CONTENTURL" => $arParams['PHOTO_SRC'][$i],
+                        //"URL" => $arParams['PHOTO_SRC'][$i],
+                        "NAME" => $arParams['PHOTO_NAME'][$i],
+                        "CAPTION" => $arParams['PHOTO_CAPTION'][$i],
+                        "DESCRIPTION" => $arParams['PHOTO_DESCRIPTION'][$i],
+                        "HEIGHT" => $arParams['PHOTO_HEIGHT'][$i],
+                        "WIDTH" => $arParams['PHOTO_WIDTH'[$i],
+                        "TRUMBNAIL_CONTENTURL" => $arParams['PHOTO_TRUMBNAIL_CONTENTURL'][$i],
+                        "TRUMBNAIL_TYPE" => "N",
+                        "REPRESENTATIVEOFPAGE" => "",
+                        "PARAM_RATING_SHOW" => "N",
+                        "ITEMPROP" => "photo",
+                    ),
+                    false,
+                    array('HIDE_ICONS' => 'Y')
+                );?>
+            <? $i++;
+            } ?>
+        </div>
+    <? } ?>
+
 	<?if($arParams['TYPE_2'] == "CivicStructure" or $arParams['TYPE_2'] == "LocalBusiness") { ?>
 
 	<div>
