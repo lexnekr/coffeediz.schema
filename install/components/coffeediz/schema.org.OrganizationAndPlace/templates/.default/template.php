@@ -117,7 +117,7 @@ $this->setFrameMode(true);?>
                         "CAPTION" => $arParams['PHOTO_CAPTION'][$i],
                         "DESCRIPTION" => $arParams['PHOTO_DESCRIPTION'][$i],
                         "HEIGHT" => $arParams['PHOTO_HEIGHT'][$i],
-                        "WIDTH" => $arParams['PHOTO_WIDTH'[$i],
+                        "WIDTH" => $arParams['PHOTO_WIDTH'][$i],
                         "TRUMBNAIL_CONTENTURL" => $arParams['PHOTO_TRUMBNAIL_CONTENTURL'][$i],
                         "TRUMBNAIL_TYPE" => "N",
                         "REPRESENTATIVEOFPAGE" => "",

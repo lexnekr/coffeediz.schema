@@ -2,10 +2,36 @@
 $this->setFrameMode(true);?>
 
 <?if(!empty($arResult['ERRORS'])):?>
-	<?foreach($arResult['ERRORS'] as $arErrors){?>
-		<p><?=$arErrors?></p>
-	<?}?>
+    <?foreach($arResult['ERRORS'] as $arErrors){?>
+        <p><?=$arErrors?></p>
+    <?}?>
 <?else:?>
+
+    <?if(!empty($arParams['USE_TWITTER'])):?>
+        <?if(!empty($arParams['TWITTER_CARD_TYPE'])):?>
+            <meta property="twitter:card" content= "<?=$arParams['TWITTER_CARD_TYPE']?>" />
+        <?endif?>
+        <?if(!empty($arParams['TWITTER_CREATOR'])):?>
+            <meta property="twitter:creator" content= "<?=$arParams['TWITTER_CREATOR']?>" />
+        <?endif?>
+        <?if(!empty($arParams['TWITTER_SITE'])):?>
+            <meta property="twitter:site" content= "<?=$arParams['TWITTER_SITE']?>" />
+        <?endif?>
+        <?if(!empty($arParams['IMAGES'])) {
+            $i=0;
+            foreach($arParams['IMAGES'] as $key) {
+                ?>
+                <meta property="twitter:image<?=$i?>" content="<?=$arParams['IMAGES'][$i]?>">
+                <? $i++;
+            }
+        }?>
+        <?if(!empty($arParams['VIDEO'])):?>
+            <meta property="twitter:player" content= "<?=$arParams['VIDEO']?>" />
+            <meta property="twitter:player:width" content="<?=$arParams['VIDEO_WIDTH']?>" />
+            <meta property="twitter:player:height" content="<?=$arParams['VIDEO_HEIGHT']?>" />
+        <?endif?>
+
+    <?endif?>
 
     <?if(!empty($arParams['TITLE'])):?>
         <meta property="og:title" content="<?=$arParams['TITLE']?>"/>
@@ -34,32 +60,6 @@ $this->setFrameMode(true);?>
         <meta property="og:site_name" content= "<?=$arParams['SITE_NAME']?>" />
     <?endif?>
 
-    <?if(!empty($arParams['USE_TWITTER'])):?>
-        <?if(!empty($arParams['TWITTER_CARD_TYPE'])):?>
-            <meta property="twitter:card" content= "<?=$arParams['TWITTER_CARD_TYPE']?>" />
-        <?endif?>
-        <?if(!empty($arParams['IMAGES'])) {
-            $i=0;
-            foreach($arParams['IMAGES'] as $key) {
-                ?>
-                <meta property="twitter:image<?=$i?>" content="<?=$arParams['IMAGES'][$i]?>">
-                <? $i++;
-            }
-        }?>
-        <?if(!empty($arParams['TWITTER_CREATOR'])):?>
-            <meta property="twitter:creator" content= "<?=$arParams['TWITTER_CREATOR']?>" />
-        <?endif?>
-        <?if(!empty($arParams['TWITTER_SITE'])):?>
-            <meta property="twitter:site" content= "<?=$arParams['TWITTER_SITE']?>" />
-        <?endif?>
-        <?if(!empty($arParams['VIDEO'])):?>
-            <meta property="twitter:player" content= "<?=$arParams['VIDEO']?>" />
-            <meta property="twitter:player:width" content="<?=$arParams['VIDEO_WIDTH']?>" />
-            <meta property="twitter:player:height" content="<?=$arParams['VIDEO_HEIGHT']?>" />
-        <?endif?>
-
-    <?endif?>
-
     <?if(!empty($arParams['VIDEO'])):?>
         <meta property="og:video" content= "<?=$arParams['VIDEO']?>" />
         <meta property="og:video:width" content="<?=$arParams['VIDEO_WIDTH']?>" />
@@ -67,5 +67,3 @@ $this->setFrameMode(true);?>
     <?endif?>
 
 <?endif?>
-
-
