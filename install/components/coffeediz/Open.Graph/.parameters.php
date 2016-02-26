@@ -20,12 +20,34 @@ $arComponentParameters = array(
             "SORT" => 500,
             "DEFAULT" => "",
         ),
+        "TITLE_LIMIT" => array(
+            "PARENT" => "MAIN_PARAMS",
+            "NAME" => GetMessage("TITLE_LIMIT"),
+            "TYPE" => "LIST",
+            "VALUES" => array(
+                "" => "-",
+                "70" => "70",
+            ),
+            "SORT" => 500,
+            "DEFAULT" => "70",
+        ),
         "DESCRIPTION" => array(
             "PARENT" => "MAIN_PARAMS",
             "NAME" => GetMessage("DESCRIPTION"),
             "TYPE" => "STRING",
             "SORT" => 500,
             "DEFAULT" => "",
+        ),
+        "DESCRIPTION_LIMIT" => array(
+            "PARENT" => "MAIN_PARAMS",
+            "NAME" => GetMessage("DESCRIPTION_LIMIT"),
+            "TYPE" => "LIST",
+            "VALUES" => array(
+                "" => "-",
+                "200" => "200",
+            ),
+            "SORT" => 500,
+            "DEFAULT" => "200",
         ),
         "TYPE" => array(
             "PARENT" => "MAIN_PARAMS",

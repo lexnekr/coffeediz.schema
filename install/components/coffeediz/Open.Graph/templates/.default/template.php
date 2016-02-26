@@ -33,11 +33,11 @@ $this->setFrameMode(true);?>
 
     <?endif?>
 
-    <?if(!empty($arParams['TITLE'])):?>
-        <meta property="og:title" content="<?=$arParams['TITLE']?>"/>
+    <?if(!empty($arResult['TITLE'])):?>
+        <meta property="og:title" content="<?=$arResult['TITLE']?>"/>
     <?endif?>
-    <?if(!empty($arParams['DESCRIPTION'])):?>
-        <meta property="og:description" content="<?=$arParams['DESCRIPTION']?>"/>
+    <?if(!empty($arResult['DESCRIPTION'])):?>
+        <meta property="og:description" content="<?=$arResult['DESCRIPTION']?>"/>
     <?endif?>
     <?if(!empty($arParams['TYPE'])):?>
         <meta property="og:type" content="<?=$arParams['TYPE']?>"/>
