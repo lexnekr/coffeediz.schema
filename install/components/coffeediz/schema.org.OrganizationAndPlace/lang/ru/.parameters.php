@@ -2,6 +2,8 @@
 $MESS ['LOGO_PARAMS'] = "Параметры Логотипа";
 $MESS ['MAIN_PARAMS'] = "Тип Организации/Места";
 $MESS ['PARAMETERS_PARAMS'] = "Основные Параметры";
+$MESS ['IMG_PARAMS'] = "Параметры фотографий (множественное)";
+
 
 $MESS ['RATING'] = "Рейтинг";
 $MESS ['PARAM_RATING_SHOW'] = "Выводить рейтинг";
@@ -657,8 +659,13 @@ $MESS [''] = "";
 $MESS [''] = "";
 $MESS [''] = "";
 $MESS [''] = "";
-$MESS [''] = "";
-$MESS [''] = "";
+$MESS ['PHOTO_NAME'] = "Названия картинок фото";
+$MESS ['PHOTO_SRC'] = "Ссылка на фото";
+$MESS ['PHOTO_CAPTION'] = "Подписи к картинкам фото";
+$MESS ['PHOTO_DESCRIPTION'] = "Описания картинок фото";
+$MESS ['PHOTO_HEIGHT'] = "Высота изображений (px)";
+$MESS ['PHOTO_WIDTH'] = "Ширина изображений (px)";
+$MESS ['PHOTO_TRUMBNAIL_CONTENTURL'] = "Ссылки на миниатюры фото";
 $MESS ['TAXID'] = "ИНН";
 $MESS ['DESCRIPTION'] = "Краткое описание";
 $MESS ['LOGO'] = "Логотип (ссылка)";

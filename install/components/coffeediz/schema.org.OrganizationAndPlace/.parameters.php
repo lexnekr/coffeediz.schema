@@ -15,6 +15,10 @@ $arComponentParameters = array(
             "SORT" => 120,
             "NAME" => GetMessage("LOGO_PARAMS"),
         ),
+        "IMG_PARAMS" => array(
+            "SORT" => 120,
+            "NAME" => GetMessage("IMG_PARAMS"),
+        ),
 		"RATING" => array(
 			"SORT" => 800,
 			"NAME" => GetMessage("RATING"),
@@ -864,3 +868,58 @@ if (!empty($arCurrentValues['LOGO']))
     );
 }
 //END LOGO DETAIL
+
+
+
+// START Photos
+if ($arCurrentValues["TYPE_2"] == "LocalBusiness" or $arCurrentValues["TYPE"] == "Place")
+{
+    $arComponentParameters["PARAMETERS"]["PHOTO_SRC"] = Array(
+        "PARENT" => "IMG_PARAMS",
+        "NAME" => GetMessage("PHOTO_SRC"),
+        "TYPE" => "STRING",
+        "REFRESH" => "Y",
+        "MULTIPLE" => "Y",
+    );
+    if (!empty($arCurrentValues["PHOTO_SRC"]))
+    {
+        $arComponentParameters["PARAMETERS"]["PHOTO_NAME"] = Array(
+            "PARENT" => "IMG_PARAMS",
+            "NAME" => GetMessage("PHOTO_NAME"),
+            "TYPE" => "STRING",
+            "MULTIPLE" => "Y",
+        );
+        $arComponentParameters["PARAMETERS"]["PHOTO_CAPTION"] = Array(
+            "PARENT" => "IMG_PARAMS",
+            "NAME" => GetMessage("PHOTO_CAPTION"),
+            "TYPE" => "STRING",
+            "MULTIPLE" => "Y",
+        );
+        $arComponentParameters["PARAMETERS"]["PHOTO_DESCRIPTION"] = Array(
+            "PARENT" => "IMG_PARAMS",
+            "NAME" => GetMessage("PHOTO_DESCRIPTION"),
+            "TYPE" => "STRING",
+            "MULTIPLE" => "Y",
+        );
+        $arComponentParameters["PARAMETERS"]["PHOTO_HEIGHT"] = Array(
+            "PARENT" => "IMG_PARAMS",
+            "NAME" => GetMessage("PHOTO_HEIGHT"),
+            "TYPE" => "STRING",
+            "MULTIPLE" => "Y",
+        );
+        $arComponentParameters["PARAMETERS"]["PHOTO_WIDTH"] = Array(
+            "PARENT" => "IMG_PARAMS",
+            "NAME" => GetMessage("PHOTO_WIDTH"),
+            "TYPE" => "STRING",
+            "MULTIPLE" => "Y",
+        );
+        $arComponentParameters["PARAMETERS"]["PHOTO_TRUMBNAIL_CONTENTURL"] = Array(
+            "PARENT" => "IMG_PARAMS",
+            "NAME" => GetMessage("PHOTO_TRUMBNAIL_CONTENTURL"),
+            "TYPE" => "STRING",
+            "MULTIPLE" => "Y",
+        );
+    }
+}
+// END Photos
+

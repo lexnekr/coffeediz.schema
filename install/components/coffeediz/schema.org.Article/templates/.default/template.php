@@ -52,7 +52,7 @@ $this->setFrameMode(true);?>
             <p itemprop="dateModified"><?=$arParams['DATA_MODIFIED']?></p>
         <?endif?>
         <?if(!empty($arParams['MAINENTITYOFPAGE'])):?>
-            <link itemprop="mainEntityOfPage" rel=canonical href=“<?=$arParams['MAINENTITYOFPAGE']?>”/>
+            <link itemprop="mainEntityOfPage" rel=canonical href="<?=$arParams['MAINENTITYOFPAGE']?>"/>
         <?endif?>
 
 
